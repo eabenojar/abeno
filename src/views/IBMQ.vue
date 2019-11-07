@@ -1,0 +1,334 @@
+<template>
+  <div class="ibmq-container">
+    <div class="ibmq-introduction">
+      <div class="ibmq-introduction__content">
+        <h1 class="ibmq-introduction__content--title">IBM Q</h1>
+        <p
+          class="ibmq-introduction__content--description"
+        >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+      </div>
+      <div class="ibmq-introduction__image">
+        <img id="table" src="../assets/images/Table.svg" alt />
+        <img id="macbook" src="../assets/images/MacbookDesktop.svg" alt />
+        <img id="table-legs" src="../assets/images/TableLegs.svg" alt />
+        <img id="tall-monitor" src="../assets/images/TallMonitorMain.svg" alt />
+        <img id="coffee-cup" src="../assets/images/CoffeeCup.svg" alt />
+      </div>
+    </div>
+    <div class="ibmq-projects">
+      <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
+        <img class="ibmq-projects__box--image" :src="getImage(item.image)" alt />
+        <h1 class="ibmq-projects__box--title">{{item.title}}</h1>
+        <p class="ibmq-projects__box--description">{{item.description}}</p>
+        <div class="ibmq-projects-metrics">
+          <div class="ibmq-projects-metrics-box">
+            <h5>40/75</h5>
+            <p>Performance</p>
+          </div>
+          <div class="ibmq-projects-metrics-box">
+            <h5>40/75</h5>
+            <p>Accesiblity</p>
+          </div>
+          <div class="ibmq-projects-metrics-box">
+            <h5>40/75</h5>
+            <p>Best Practices</p>
+          </div>
+          <div class="ibmq-projects-metrics-box">
+            <h5>40/75</h5>
+            <p>Seo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          title: "IBM Homepage",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "homepage.png",
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "What is Quantum Computing?",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "what-is-qc.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "What is IBM Q?",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "what-is-ibmq.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "IQX Marketing",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "iqx-marketing.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Simulator",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "simulator.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Showcase",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "showcase.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "System",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "system.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Members",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "members.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Researchers",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "researchers.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Overview",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "overview.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Internship",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "internship.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        },
+        {
+          title: "Consulting",
+          description:
+            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          image: "consulting.png",
+
+          performance: "40/50",
+          accesiblity: "40/50",
+          bestPractices: "40/50",
+          seo: "40/50"
+        }
+      ]
+    };
+  },
+  methods: {
+    getImage(pic) {
+      console.log("PATH", pic);
+      // var images = require.context("../assets/", false, /\.svg$/);
+      // return images("../assets/images/" + pic);
+
+      // var image = require(pic);
+      var image = require(`../assets/images/${pic}`);
+
+      console.log("IMAGE", image);
+      return image;
+    }
+  }
+};
+</script>
+
+
+<style scoped lang="scss">
+@mixin flex-grid($justify, $align) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ibmq-container {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  padding: 0;
+  background: #f1f3f5;
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -moz-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: -ms-repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: repeating-radial-gradient(
+    center center,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
+  z-index: 1000;
+}
+.ibmq-introduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.ibmq-introduction__content {
+  width: 50vw;
+  height: 100vh;
+}
+.ibmq-introduction__image {
+  width: 50vw;
+  height: 100vh;
+}
+.ibmq-introduction__content--title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 6rem 0 0 0;
+  padding: 0 3rem;
+}
+.ibmq-introduction__content--description {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 2rem 0 0 0;
+  padding: 0 3rem;
+}
+.ibmq-projects {
+  height: 100vh;
+  width: 100vw;
+  @include flex-grid(center, center);
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .ibmq-projects__box--title,
+  .ibmq-projects__box--description {
+    color: #fff;
+    margin: 2rem 1rem 2rem 1rem;
+    top: 2rem;
+    font-family: Montserrat, sans-serif;
+    z-index: 1000;
+    position: relative;
+  }
+}
+.ibmq-projects__box {
+  height: 300px;
+  width: 400px;
+  margin: 2rem 1rem 2rem 1rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  // @include flex-grid(flex-end, none);
+  flex-direction: column;
+  background: blue;
+  border-radius: 4px;
+}
+
+.ibmq-projects__box--title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.ibmq-projects__box--description {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.ibmq-projects__box--image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+.ibmq-projects-metrics {
+  position: absolute;
+  bottom: -50px;
+  right: 5%;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  width: 90%;
+  border-radius: 3px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+</style>
