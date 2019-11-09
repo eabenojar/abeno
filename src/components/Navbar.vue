@@ -10,9 +10,9 @@
       <li>
         <a href="/work">Work</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="/contact">Contact</a>
-      </li>
+      </li>-->
     </ul>
   </div>
 </template>
@@ -24,13 +24,13 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background: none;
   z-index: 10000;
 }
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 4rem;
   float: left;
 }
 ul li {
