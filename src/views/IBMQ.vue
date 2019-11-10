@@ -6,6 +6,9 @@
         <p
           class="ibmq-introduction__content--description"
         >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+        <a href="https://www.ibm.com/quantum-computing/" target="_blank">
+          <button class="work-button">See my work on IBM Q</button>
+        </a>
       </div>
       <div class="ibmq-introduction__image">
         <img id="table" src="../assets/images/Table.svg" alt />
@@ -14,6 +17,18 @@
         <img id="tall-monitor" src="../assets/images/TallMonitorMain.svg" alt />
         <img id="coffee-cup" src="../assets/images/CoffeeCup.svg" alt />
       </div>
+    </div>
+    <div class="ibmq-components">
+      <h1 class="ibmq-components__title">Components</h1>
+      <p
+        class="ibmq-components__description"
+      >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+    </div>
+    <div class="ibmq-projects-content">
+      <h1 class="ibmq-projects-content__title">Performance</h1>
+      <p
+        class="ibmq-projects-content__description"
+      >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
     </div>
     <div class="ibmq-projects">
       <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
@@ -244,6 +259,34 @@ export default {
   background-size: 20px 20px;
   z-index: 1000;
 }
+.work-button {
+  width: 240px;
+  height: 48px;
+  text-decoration: none;
+  background: #120f32;
+  margin: 2rem 3rem;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  button {
+    outline: none;
+  }
+}
+.work-button:hover {
+  height: 48px;
+  width: 240px;
+  background: #312985;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  button {
+    outline: none;
+  }
+}
 .ibmq-introduction {
   height: 100vh;
   width: 100vw;
@@ -257,6 +300,7 @@ export default {
 .ibmq-introduction__image {
   width: 50vw;
   height: 100vh;
+  position: relative;
 }
 .ibmq-introduction__content--title {
   font-family: Montserrat, sans-serif;
@@ -271,6 +315,40 @@ export default {
   font-size: 1rem;
   margin: 2rem 0 0 0;
   padding: 0 3rem;
+}
+.ibmq-components {
+  .ibmq-components__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 6rem 0 0 0;
+    padding: 0 3rem;
+  }
+  .ibmq-components__description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 2rem 0 0 0;
+    padding: 0 3rem;
+    width: 50%;
+  }
+}
+.ibmq-projects-content {
+  .ibmq-projects-content__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 6rem 0 0 0;
+    padding: 0 3rem;
+  }
+  .ibmq-projects-content__description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 2rem 0 0 0;
+    padding: 0 3rem;
+    width: 50%;
+  }
 }
 .ibmq-projects {
   height: 100vh;
@@ -330,5 +408,67 @@ export default {
   width: 90%;
   border-radius: 3px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+#table {
+  position: absolute;
+  left: auto;
+  bottom: 60%;
+  animation: 2s ease 0s 1 fadeInLeft;
+}
+#macbook {
+  position: absolute;
+  left: 5%;
+  bottom: calc(60% + 20px);
+  animation: 3s ease 0s 1 fadeInDown;
+}
+#coffee-cup {
+  position: absolute;
+  left: 60%;
+  bottom: calc(60% + 20px);
+  animation: 4s ease 0s 1 fadeInLeft;
+  /* animation-iteration-count: infinite; */
+}
+#tall-monitor {
+  position: absolute;
+  left: 40%;
+  bottom: calc(60% + 20px);
+  animation: 2s ease 0s 1 fadeInDown;
+}
+#table-legs {
+  position: absolute;
+  bottom: calc(60% - 150px);
+  left: 12%;
+  height: 150px;
+  animation: 3s ease 0s 1 fadeInUp;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

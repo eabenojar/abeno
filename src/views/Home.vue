@@ -22,12 +22,12 @@
       <div class="intro-container__description">
         <h5 class="intro-container__sub-header">Hello!</h5>
         <h2 class="intro-container__description--title">
-          First
-          <br />Lastname
+          Eric
+          <br />Abenojar
         </h2>
         <p
           class="intro-container__description--content"
-        >I am First Lastname, a design-minded front-end software engineer focused on building beautiful interfaces and experiences</p>
+        >I am a front-end software engineer with a focus on developing beautiful interfaces and experiences</p>
       </div>
       <div class="intro-container__wireframe">
         <div class="intro-container__wireframe-images">
@@ -79,7 +79,7 @@
         <h2 class="about-container__description--title">About</h2>
         <p
           class="about-container__description--content"
-        >As a Mechanical Engineer turned Front End Developer, I’ve always loved designing and engineering new products. I have experience building full stack applications, as well as, working with designers to map out a concept to final product.</p>
+        >As a Mechanical Engineer from the University of Florida turned Front End Developer, I’ve always loved designing and engineering new products. I have experience building full stack applications, developing within a design system, and working with designers from UX/UI, Research, to Motion.</p>
       </div>
     </div>
 
@@ -91,33 +91,42 @@
         </h2>
         <p
           class="work-container__description--content"
-        >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering, high performance, and accessible websites.</p>
-        <button class="work-button" @click="toWork()" type="button">View my work on IBM Q</button>
+        >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build server side rendering, high performance, and accessible websites.</p>
       </div>
       <div class="work-container__chalkboard">
         <div class="project-container__card active" @click="redirectIBMQ()">
-          <h1 class="project-container__card--title active">Project 1</h1>
-          <p
-            class="project-container__card--description active"
-          >Built the IBM Q marketing website using Vue.js and Nuxt.js</p>
+          <a href="https://www.ibm.com/quantum-computing/" target="_blank">
+            <h1 class="project-container__card--title active">IBM Quantum Computing</h1>
+            <p
+              class="project-container__card--description active"
+            >Built the IBM Q marketing website using Vue.js and Nuxt.js</p>
+          </a>
         </div>
         <div class="project-container__card">
-          <h1 class="project-container__card--title">Project 2</h1>
-          <p
-            class="project-container__card--description"
-          >Built a developer meetup app using React, Redux, Node, and MongoDB</p>
+          <a href="https://minicodecamp.herokuapp.com/courses" target="_blank">
+            <h1 class="project-container__card--title">Mini Code Camp</h1>
+            <p
+              class="project-container__card--description"
+            >Built a developer meetup app using React, Redux, Node, and MongoDB</p>
+          </a>
         </div>
+
         <div class="project-container__card">
-          <h1 class="project-container__card--title">Project 3</h1>
-          <p
-            class="project-container__card--description"
-          >Built a react native mobile app that allows travelers to find unque experiences guided by a local.</p>
+          <a href="https://teslacloneapp.herokuapp.com/" target="_blank">
+            <h1 class="project-container__card--title">Tesla Clone</h1>
+            <p
+              class="project-container__card--description"
+            >Built a react native mobile app that allows travelers to find unque experiences guided by a local.</p>
+          </a>
         </div>
+
         <div class="project-container__card">
-          <h1 class="project-container__card--title">Project 4</h1>
-          <p
-            class="project-container__card--description"
-          >Built a platform for validating talent all in one place for mid-senior lvl roles</p>
+          <a href="https://travelplansus.herokuapp.com/" target="_blank">
+            <h1 class="project-container__card--title">Trip Planner</h1>
+            <p
+              class="project-container__card--description"
+            >Plan up to 5 trips with total distance, total time, and directions</p>
+          </a>
         </div>
       </div>
       <!-- <div class="buildings-container">
@@ -127,8 +136,8 @@
         <img class="buildings" id="building-2A" src="../assets/images/Building 2.1.svg" alt />
         <img class="buildings" id="building-3" src="../assets/images/Building 3.svg" alt />
         <img class="buildings" id="building-3A" src="../assets/images/Building 3.1.svg" alt />
-        <img class="buildings" id="building-4" src="../assets/images/Building 4.svg" alt />
-      </div>-->
+      <img class="buildings" id="building-4" src="../assets/images/Building 4.svg" alt />-->
+      <!-- </div> -->
     </div>
     <!-- <div class="project-container" id="project-section">
       <h1>Projects</h1>
@@ -176,11 +185,9 @@ export default {
         var chalkboard = document.getElementById("chalk-board");
         var terminal = document.getElementById("terminal");
         if (windowPosition > initialPosition * 0.05 && counter === 0) {
-          console.log("SCROLLED TO 2ND DIV!");
           chalkboard.classList.add("chalk-board-animate");
           counter++;
         } else if (windowPosition > initialPosition * 1.75) {
-          console.log("SCROLL TO 3RD DIV");
           const b1 = document.getElementById("building-1");
           const b1A = document.getElementById("building-1A");
           const b2 = document.getElementById("building-2");
@@ -202,12 +209,26 @@ export default {
         }
       }.bind(this)
     );
-    console.log("WINDOW POSITION", windowPosition);
   },
   destroyed() {
     window.removeEventListener("scroll", this.scrollToWorkTwo);
   },
   methods: {
+    // scrollTo(element, to, duration) {
+    //   if (duration <= 0) return;
+    //   var difference = to - element.scrollTop;
+    //   var perTick = (difference / duration) * 10;
+
+    //   setTimeout(function() {
+    //     element.scrollTop = element.scrollTop + perTick;
+    //     if (element.scrollTop === to) return;
+    //     scrollTo(element, to, duration - 10);
+    //   }, 10);
+    // },
+    // scrollClicked(id) {
+    //   var elmnt = document.getElementById(id);
+    //   scrollTo(document.body, elmnt.offsetTop, 600);
+    // },
     isHomePageRendered() {
       setTimeout(() => {
         this.isWireframeRendered = true;
@@ -221,8 +242,6 @@ export default {
       this.$router.push("ibmq");
     },
     scrollToWork() {
-      // const work = document.getElementById("intro-section");
-      console.log("GET WORK IN", work.offsetTop);
       scrollTo(work, 0, 1250);
       function scrollTo(element, to, duration) {
         var start = element.offsetTop;
@@ -368,21 +387,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/* .container {
-  background: linear-gradient(90deg, #1370fb (22px - 2px), transparent 1%)
-      center,
-    linear-gradient(#1370fb (22px - 2px), transparent 1%) center, #3882e8;
-  background-size: 22px 22px;
-  z-index: 1000;
-} */
-/* .container {
-  background: rgb(33, 147, 176);
-  background: linear-gradient(
-    90deg,
-    rgba(33, 147, 176, 1) 0%,
-    rgba(109, 213, 237, 1) 100%
-  );
-} */
 @mixin border-boxes {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -550,38 +554,7 @@ export default {
   /* background: red; */
   width: 500px;
 }
-#table {
-  position: absolute;
-  left: auto;
-  bottom: 60%;
-  animation: 2s ease 0s 1 fadeInLeft;
-}
-#macbook {
-  position: absolute;
-  left: 5%;
-  bottom: calc(60% + 20px);
-  animation: 3s ease 0s 1 fadeInDown;
-}
-#coffee-cup {
-  position: absolute;
-  right: 0;
-  bottom: calc(60% + 20px);
-  animation: 4s ease 0s 1 fadeInLeft;
-  /* animation-iteration-count: infinite; */
-}
-#tall-monitor {
-  position: absolute;
-  right: 15%;
-  bottom: calc(60% + 20px);
-  animation: 2s ease 0s 1 fadeInDown;
-}
-#table-legs {
-  position: absolute;
-  bottom: calc(60% - 150px);
-  left: auto;
-  height: 150px;
-  animation: 3s ease 0s 1 fadeInUp;
-}
+
 .chalk-board-animate {
   animation: 3s ease 0s 1 fadeInUp;
 }
@@ -656,7 +629,7 @@ export default {
     font-family: Montserrat, sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
-    width: 80%;
+    width: 100%;
   }
   .intro-container__wireframe {
     height: 100%;
@@ -684,7 +657,7 @@ export default {
         left: 5%;
         top: 25%;
         width: 35%;
-        animation: 2s ease 0s 1 fadeInLeft;
+        animation: 1.5s ease 0s 1 fadeInLeft;
       }
       #tablet-wireframe {
         position: absolute;
@@ -698,7 +671,7 @@ export default {
         right: 5%;
         top: 25%;
         width: 15%;
-        animation: 2s ease 0s 1 fadeInLeft;
+        animation: 2.5s ease 0s 1 fadeInLeft;
       }
     }
   }
@@ -711,14 +684,14 @@ export default {
   flex-direction: row;
   position: relative;
   .about-container__stripes {
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     // background: #556cd6;
     background: #f9f9f9;
     position: absolute;
     top: 0;
     left: 0;
-    transform: skewY(-15deg);
+    transform: skewY(-10deg);
     z-index: -1000;
   }
   .about-container__description {
@@ -732,37 +705,41 @@ export default {
     .about-container__description--title {
       font-family: Montserrat, sans-serif;
       font-weight: 600;
+      margin: 0;
       font-size: 3rem;
     }
     .about-container__description--content {
       font-family: Montserrat, sans-serif;
       font-weight: 300;
       font-size: 1.5rem;
-      width: 80%;
+      width: 100%;
     }
   }
 }
 #project-section {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100vw;
   display: flex;
   flex-direction: row;
   /* background: #2471a3; */
   .work-container__description {
-    width: 50%;
+    width: 40%;
     height: 100%;
-    padding: 0 4rem;
+    min-height: 100vh;
+
+    padding: 0 2rem 0 4rem;
     @include border-boxes();
     display: flex;
     overflow: hidden;
     position: relative;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     .work-container__description--title {
       font-family: Montserrat, sans-serif;
       font-weight: 600;
       font-size: 3rem;
-      margin: 6rem 0 0 0;
+      margin: 2rem 0 0 0;
     }
 
     .work-container__description--content {
@@ -771,30 +748,10 @@ export default {
       font-size: 1.5rem;
       width: 80%;
     }
-    .work-button {
-      height: 48px;
-      width: 240px;
-      background: #120f32;
-      border-radius: 5px;
-      color: #fff;
-      font-family: Montserrat, sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-    }
-    .work-button:hover {
-      height: 48px;
-      width: 200px;
-      background: #312985;
-      border-radius: 5px;
-      color: #fff;
-      font-family: Montserrat, sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      margin: 0 3rem;
-    }
   }
   .work-container__chalkboard {
-    width: 100%;
+    width: 60%;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -805,19 +762,23 @@ export default {
     /* Buildings */
     .project-container__card:nth-child(1) {
       height: 250px;
-      width: 400px;
+      width: 300px;
       background: #120f32;
       box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
       margin: 1rem 0 0 1rem;
     }
     .project-container__card:not(:first-child) {
       height: 250px;
-      width: 400px;
+      width: 300px;
       background: #fcfcfc;
       box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
       margin: 1rem 0 0 1rem;
     }
-
+    .project-container__card {
+      a {
+        text-decoration: none !important;
+      }
+    }
     .project-container__card--title.active,
     .project-container__card--description.active,
     .project-container__card--title,
@@ -839,7 +800,7 @@ export default {
     }
     .project-container__card:hover {
       height: 250px;
-      width: 400px;
+      width: 300px;
       background: #120f32;
       box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
       // margin: 6rem 0 0 1rem;
@@ -859,6 +820,9 @@ export default {
   /* position: relative; */
   justify-content: center;
   /* align-items: center; */
+  img {
+    width: calc(100% - 4rem);
+  }
 }
 
 @keyframes openWindow {
@@ -918,19 +882,6 @@ export default {
     transform: translateX(0);
   }
 }
-
-/* .project-container__card:hover {
-  height: 350px;
-  width: 300px;
-  background: #fcfcfc;
-  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
-  margin: 6rem 0 0 1rem;
-} */
-
-/* .project-container__card .active:hover h1,
-.project-container__card .active:hover p {
-  color: #120f32;
-} */
 
 .buildings-container {
   position: absolute;
@@ -992,6 +943,99 @@ export default {
     transform: translateY(0);
   }
 }
+@media only screen and (max-width: 1200px) {
+  #project-section {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* background: #2471a3; */
+    .work-container__description {
+      width: 100%;
+      min-height: 0;
+      height: 100%;
+      padding: 6rem 4rem 4rem 4rem;
+      @include border-boxes();
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      justify-content: flex-start;
+      flex-direction: column;
+      .work-container__description--title {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+        margin: 6rem 0 0 0;
+      }
+
+      .work-container__description--content {
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        font-size: 1.5rem;
+        width: 80%;
+      }
+    }
+    .work-container__chalkboard {
+      width: 100%;
+      min-height: 0;
+      padding: 0 0 4rem 0;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      // overflow: hidden;
+      position: relative;
+      justify-content: center;
+      /* Buildings */
+      .project-container__card:nth-child(1) {
+        height: 250px;
+        width: 400px;
+        background: #120f32;
+        box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
+        margin: 1rem 0 0 1rem;
+      }
+      .project-container__card:not(:first-child) {
+        height: 250px;
+        width: 400px;
+        background: #fcfcfc;
+        box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
+        margin: 1rem 0 0 1rem;
+      }
+
+      .project-container__card--title.active,
+      .project-container__card--description.active,
+      .project-container__card--title,
+      .project-container__card--description {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        color: #fff;
+        margin: 2rem 1rem 1rem 1rem;
+      }
+      .project-container__card--title,
+      .project-container__card--description {
+        color: #120f32;
+      }
+      .project-container__card--description.active,
+      .project-container__card--description {
+        font-weight: 100;
+        font-size: 1rem;
+      }
+      .project-container__card:hover {
+        height: 250px;
+        width: 400px;
+        background: #120f32;
+        box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
+        // margin: 6rem 0 0 1rem;
+      }
+      .project-container__card:hover h1,
+      .project-container__card:hover p {
+        color: #fff;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   #intro-section {
     height: 100vh;
@@ -1038,7 +1082,7 @@ export default {
           left: 5%;
           top: 25%;
           width: 35%;
-          animation: 2s ease 0s 1 fadeInLeft;
+          animation: 1.5s ease 0s 1 fadeInLeft;
         }
         #tablet-wireframe {
           position: absolute;
@@ -1052,7 +1096,7 @@ export default {
           right: 5%;
           top: 25%;
           width: 15%;
-          animation: 2s ease 0s 1 fadeInLeft;
+          animation: 2.5s ease 0s 1 fadeInLeft;
         }
       }
     }
@@ -1066,6 +1110,7 @@ export default {
     /* background: #2471a3; */
     .work-container__description {
       width: 100%;
+      min-height: 0;
       height: 100%;
       padding: 6rem 4rem 4rem 4rem;
       @include border-boxes();
@@ -1078,7 +1123,7 @@ export default {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
         font-size: 3rem;
-        margin: 6rem 0 0 0;
+        margin: 8rem 0 0 0;
       }
 
       .work-container__description--content {
@@ -1087,30 +1132,10 @@ export default {
         font-size: 1.5rem;
         width: 80%;
       }
-      .work-button {
-        height: 48px;
-        width: 240px;
-        background: #120f32;
-        border-radius: 5px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .work-button:hover {
-        height: 48px;
-        width: 200px;
-        background: #312985;
-        border-radius: 5px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        margin: 0 3rem;
-      }
     }
     .work-container__chalkboard {
       width: 100%;
+      min-height: 0;
       padding: 0 0 4rem 0;
       height: auto;
       display: flex;
@@ -1156,7 +1181,7 @@ export default {
       }
       .project-container__card:hover {
         height: 250px;
-        width: 400px;
+        width: 300px;
         background: #120f32;
         box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
         // margin: 6rem 0 0 1rem;
@@ -1193,7 +1218,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      transform: skewY(-15deg);
+      transform: skewY(-10deg);
       z-index: -1000;
     }
     .about-container__description {
@@ -1214,7 +1239,7 @@ export default {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
         font-size: 1.5rem;
-        width: 80%;
+        width: 100%;
       }
     }
   }
@@ -1254,7 +1279,7 @@ export default {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
         font-size: 1rem;
-        width: 80%;
+        width: 100%;
       }
     }
     .intro-container__wireframe {
@@ -1283,7 +1308,7 @@ export default {
           left: 5%;
           top: 25%;
           width: 35%;
-          animation: 2s ease 0s 1 fadeInLeft;
+          animation: 1.5s ease 0s 1 fadeInLeft;
         }
         #tablet-wireframe {
           position: absolute;
@@ -1297,7 +1322,7 @@ export default {
           right: 5%;
           top: 25%;
           width: 15%;
-          animation: 2s ease 0s 1 fadeInLeft;
+          animation: 2.5s ease 0s 1 fadeInLeft;
         }
       }
     }
@@ -1311,8 +1336,10 @@ export default {
     /* background: #2471a3; */
     .work-container__description {
       width: 100%;
+      min-height: none;
       height: 100%;
-      padding: 6rem 4rem 4rem 4rem;
+
+      padding: 2rem;
       @include border-boxes();
       display: flex;
       overflow: hidden;
@@ -1322,36 +1349,15 @@ export default {
       .work-container__description--title {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
-        font-size: 3rem;
-        margin: 6rem 0 0 0;
+        font-size: 2rem;
+        margin: 3rem 0 0 0;
       }
 
       .work-container__description--content {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
-        width: 80%;
-      }
-      .work-button {
-        height: 48px;
-        width: 240px;
-        background: #120f32;
-        border-radius: 5px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .work-button:hover {
-        height: 48px;
-        width: 200px;
-        background: #312985;
-        border-radius: 5px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        margin: 0 3rem;
+        font-size: 1rem;
+        width: 100%;
       }
     }
     .work-container__chalkboard {
@@ -1367,17 +1373,17 @@ export default {
       /* Buildings */
       .project-container__card:nth-child(1) {
         height: 250px;
-        width: 300px;
+        width: calc(100% - 4rem);
         background: #120f32;
         box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
-        margin: 1rem 0 0 1rem;
+        margin: 1rem 0 0 0;
       }
       .project-container__card:not(:first-child) {
         height: 250px;
-        width: 300px;
+        width: calc(100% - 4rem);
         background: #fcfcfc;
         box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
-        margin: 1rem 0 0 1rem;
+        margin: 1rem 0 0 0;
       }
 
       .project-container__card--title.active,
@@ -1401,7 +1407,7 @@ export default {
       }
       .project-container__card:hover {
         height: 250px;
-        width: 400px;
+        width: calc(100% - 4rem);
         background: #120f32;
         box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.15);
         // margin: 6rem 0 0 1rem;
@@ -1413,9 +1419,10 @@ export default {
     }
   }
   #about-section {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
-    max-height: 900px;
+    max-height: none;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1424,21 +1431,25 @@ export default {
       width: 100%;
       height: 100%;
       display: flex;
+      // padding: 0 4rem;
       overflow: hidden;
       order: 2;
       /* position: relative; */
       justify-content: center;
       /* align-items: center; */
+      img {
+        width: calc(100% - 4rem);
+      }
     }
     .about-container__stripes {
-      height: 100vh;
+      min-height: 95vh;
+      height: auto;
       width: 100%;
-      // background: #556cd6;
       background: #f9f9f9;
       position: absolute;
       top: 0;
       left: 0;
-      transform: skewY(-15deg);
+      transform: skewY(-10deg);
       z-index: -1000;
     }
     .about-container__description {
@@ -1447,19 +1458,20 @@ export default {
       order: 1;
       display: flex;
       @include border-boxes();
-      padding: 0 4rem;
+      padding: 0 2rem;
       flex-direction: column;
       justify-content: center;
       .about-container__description--title {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
-        font-size: 3rem;
+        margin: 4rem 0 0 0;
+        font-size: 2rem;
       }
       .about-container__description--content {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
-        width: 80%;
+        font-size: 1rem;
+        width: 100%;
       }
     }
   }

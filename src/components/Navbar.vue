@@ -5,17 +5,35 @@
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="/about">About</a>
+        <a @click="scrollClicked(`about-section`)">About</a>
       </li>
       <li>
-        <a href="/work">Work</a>
+        <a @click="scrollClicked(`project-section`)">Work</a>
       </li>
-      <!-- <li>
-        <a href="/contact">Contact</a>
-      </li>-->
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    scrollTo(element, to, duration) {
+      if (duration <= 0) return;
+      var difference = to - element.scrollTop;
+      var perTick = (difference / duration) * 10;
+      setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+      }, 10);
+    },
+    scrollClicked(id) {
+      var elmnt = document.getElementById(id);
+      scrollTo(document.body, elmnt.offsetTop, 2000);
+    }
+  }
+};
+</script>
 
 
 <style scoped>
@@ -30,7 +48,7 @@
 }
 ul {
   list-style-type: none;
-  margin: 0 4rem;
+  margin: 0 2rem;
   float: left;
 }
 ul li {
@@ -43,5 +61,12 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #000;
+}
+@media only screen and (max-width: 768px) {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    float: left;
+  }
 }
 </style>
