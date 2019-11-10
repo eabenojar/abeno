@@ -94,7 +94,7 @@
         >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build server side rendering, high performance, and accessible websites.</p>
       </div>
       <div class="work-container__chalkboard">
-        <div class="project-container__card active" @click="redirectIBMQ()">
+        <div class="project-container__card active">
           <a href="https://www.ibm.com/quantum-computing/" target="_blank">
             <h1 class="project-container__card--title active">IBM Quantum Computing</h1>
             <p
