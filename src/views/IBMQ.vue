@@ -22,7 +22,12 @@
       <h1 class="ibmq-components__title">Components</h1>
       <p
         class="ibmq-components__description"
-      >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+      >On the IBM Q web team, I developed components for our site using Vue.js. I worked with UX and Visual designers to turn wireframes into final components.</p>
+      <div class="ibmq-components__images">
+        <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
+        <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
+        <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
+      </div>
     </div>
     <div class="ibmq-projects-content">
       <h1 class="ibmq-projects-content__title">Performance</h1>
@@ -37,19 +42,19 @@
         <p class="ibmq-projects__box--description">{{item.description}}</p>
         <div class="ibmq-projects-metrics">
           <div class="ibmq-projects-metrics-box">
-            <h5>40/75</h5>
+            <h5>{{item.performance}}</h5>
             <p>Performance</p>
           </div>
           <div class="ibmq-projects-metrics-box">
-            <h5>40/75</h5>
-            <p>Accesiblity</p>
+            <h5>{{item.accessibility}}</h5>
+            <p>Accessibility</p>
           </div>
           <div class="ibmq-projects-metrics-box">
-            <h5>40/75</h5>
+            <h5>{{item.bestPractices}}</h5>
             <p>Best Practices</p>
           </div>
           <div class="ibmq-projects-metrics-box">
-            <h5>40/75</h5>
+            <h5>{{item.seo}}</h5>
             <p>Seo</p>
           </div>
         </div>
@@ -68,10 +73,10 @@ export default {
           description:
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "homepage.png",
-          performance: "40/50",
-          accesiblity: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "15/93",
+          accessibility: "78/96",
+          bestPractices: "64/93",
+          seo: "80/100"
         },
         {
           title: "What is Quantum Computing?",
@@ -79,10 +84,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "what-is-qc.png",
 
-          performance: "40/50",
-          accesiblity: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "44/81",
+          accessibility: "83/96",
+          bestPractices: "64/64",
+          seo: "89/100"
         },
         {
           title: "What is IBM Q?",
@@ -90,10 +95,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "what-is-ibmq.png",
 
-          performance: "40/50",
-          accesiblity: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "37/91",
+          accessibility: "88/100",
+          bestPractices: "71/86",
+          seo: "89/100"
         },
         {
           title: "IQX Marketing",
@@ -101,10 +106,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "iqx-marketing.png",
 
-          performance: "40/50",
-          accesiblity: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "66/87",
+          accessibility: "87/100",
+          bestPractices: "71/71",
+          seo: "100/100"
         },
         {
           title: "Simulator",
@@ -113,7 +118,7 @@ export default {
           image: "simulator.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -124,7 +129,7 @@ export default {
           image: "showcase.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -135,7 +140,7 @@ export default {
           image: "system.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -146,7 +151,7 @@ export default {
           image: "members.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -157,7 +162,7 @@ export default {
           image: "researchers.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -168,7 +173,7 @@ export default {
           image: "overview.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -179,7 +184,7 @@ export default {
           image: "internship.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         },
@@ -190,7 +195,7 @@ export default {
           image: "consulting.png",
 
           performance: "40/50",
-          accesiblity: "40/50",
+          accessibility: "40/50",
           bestPractices: "40/50",
           seo: "40/50"
         }
@@ -312,7 +317,7 @@ export default {
 .ibmq-introduction__content--description {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin: 2rem 0 0 0;
   padding: 0 3rem;
 }
@@ -331,6 +336,25 @@ export default {
     margin: 2rem 0 0 0;
     padding: 0 3rem;
     width: 50%;
+  }
+  .ibmq-components__images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    #desktop-navbar {
+      width: 80%;
+      margin: 4rem 0 2rem 0;
+    }
+    #tablet-navbar {
+      margin: 0 2rem 0 0;
+    }
+    #mobile-navbar {
+      margin: 0;
+    }
   }
 }
 .ibmq-projects-content {
@@ -408,6 +432,21 @@ export default {
   width: 90%;
   border-radius: 3px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  .ibmq-projects-metrics-box {
+    width: 25%;
+    text-align: left;
+    padding-left: 1rem;
+    h5 {
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    p {
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+    }
+  }
 }
 #table {
   position: absolute;

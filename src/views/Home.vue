@@ -617,7 +617,7 @@ export default {
   .intro-container__sub-header {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .intro-container__description--title {
     font-family: Montserrat, sans-serif;
@@ -628,7 +628,7 @@ export default {
   .intro-container__description--content {
     font-family: Montserrat, sans-serif;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 100%;
   }
   .intro-container__wireframe {
@@ -711,7 +711,7 @@ export default {
     .about-container__description--content {
       font-family: Montserrat, sans-serif;
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       width: 100%;
     }
   }
@@ -745,7 +745,7 @@ export default {
     .work-container__description--content {
       font-family: Montserrat, sans-serif;
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       width: 80%;
     }
   }
@@ -972,8 +972,8 @@ export default {
       .work-container__description--content {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
-        width: 80%;
+        font-size: 1.25rem;
+        width: 50%;
       }
     }
     .work-container__chalkboard {
@@ -1129,7 +1129,7 @@ export default {
       .work-container__description--content {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         width: 80%;
       }
     }
@@ -1238,7 +1238,7 @@ export default {
       .about-container__description--content {
         font-family: Montserrat, sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         width: 100%;
       }
     }
