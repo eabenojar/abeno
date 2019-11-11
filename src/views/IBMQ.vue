@@ -297,16 +297,17 @@ export default {
   width: 100vw;
   display: flex;
   flex-direction: row;
+  .ibmq-introduction__content {
+    width: 50vw;
+    height: 100vh;
+  }
+  .ibmq-introduction__image {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+  }
 }
-.ibmq-introduction__content {
-  width: 50vw;
-  height: 100vh;
-}
-.ibmq-introduction__image {
-  width: 50vw;
-  height: 100vh;
-  position: relative;
-}
+
 .ibmq-introduction__content--title {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
@@ -332,7 +333,7 @@ export default {
   .ibmq-components__description {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 2rem 0 0 0;
     padding: 0 3rem;
     width: 50%;
@@ -368,7 +369,7 @@ export default {
   .ibmq-projects-content__description {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 2rem 0 0 0;
     padding: 0 3rem;
     width: 50%;
@@ -376,7 +377,8 @@ export default {
 }
 .ibmq-projects {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
   @include flex-grid(center, center);
   flex-direction: row;
   flex-wrap: wrap;
@@ -397,7 +399,6 @@ export default {
   margin: 2rem 1rem 2rem 1rem;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  // @include flex-grid(flex-end, none);
   flex-direction: column;
   background: blue;
   border-radius: 4px;
@@ -465,7 +466,6 @@ export default {
   left: 60%;
   bottom: calc(60% + 20px);
   animation: 4s ease 0s 1 fadeInLeft;
-  /* animation-iteration-count: infinite; */
 }
 #tall-monitor {
   position: absolute;
@@ -508,6 +508,216 @@ export default {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 960px) {
+  .ibmq-projects {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    padding: 4rem 0;
+    margin: 0;
+    @include flex-grid(center, center);
+    flex-direction: column;
+    // flex-wrap: wrap;
+
+    .ibmq-projects__box--title,
+    .ibmq-projects__box--description {
+      color: #fff;
+      margin: 2rem 1rem 2rem 1rem;
+      top: 2rem;
+      font-family: Montserrat, sans-serif;
+      z-index: 1000;
+      position: relative;
+    }
+  }
+  .ibmq-introduction {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    .ibmq-introduction__content {
+      width: 100vw;
+      height: 100vh;
+    }
+    .ibmq-introduction__image {
+      width: 60%;
+      padding: 0 2rem;
+      height: 100vh;
+      position: relative;
+    }
+  }
+  .ibmq-components__images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    #desktop-navbar {
+      width: 80%;
+      margin: 4rem 0 2rem 0;
+    }
+    #tablet-navbar {
+      width: 80%;
+      max-width: 500px;
+      margin: 0 2rem 2rem 0;
+    }
+    #mobile-navbar {
+      width: 80%;
+      max-width: 300px;
+      margin: 2rem;
+    }
+  }
+  #table {
+    position: absolute;
+    left: auto;
+    width: 80%;
+    bottom: 60%;
+    animation: 2s ease 0s 1 fadeInLeft;
+  }
+  #macbook {
+    position: absolute;
+    left: 15%;
+    width: 35%;
+    bottom: calc(60% + 10px);
+    animation: 3s ease 0s 1 fadeInDown;
+  }
+  #coffee-cup {
+    position: absolute;
+    left: 70%;
+    bottom: calc(60% + 10px);
+    animation: 4s ease 0s 1 fadeInLeft;
+  }
+  #tall-monitor {
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    bottom: calc(60% + 10px);
+    animation: 2s ease 0s 1 fadeInDown;
+  }
+  #table-legs {
+    position: absolute;
+    bottom: calc(60% - 150px);
+    width: 75%;
+    left: auto;
+    height: 150px;
+    animation: 3s ease 0s 1 fadeInUp;
+  }
+  .ibmq-projects__box {
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem 0;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    background: none;
+    border-radius: 4px;
+  }
+  .ibmq-projects-content {
+    .ibmq-projects-content__title {
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      margin: 6rem 0 0 0;
+      padding: 0 3rem;
+    }
+    .ibmq-projects-content__description {
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin: 2rem 0 0 0;
+      padding: 0 3rem;
+      width: 80%;
+    }
+  }
+}
+@media only screen and (max-width: 540px) {
+  #table,
+  #macbook,
+  #coffee-cup,
+  #tall-monitor,
+  #table-legs {
+    display: none;
+  }
+  .ibmq-introduction .ibmq-introduction__content {
+    width: 100vw;
+    height: auto;
+  }
+  .work-button {
+    margin: 2rem 2rem;
+  }
+  .ibmq-introduction {
+    max-height: 100vh;
+    height: auto;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .ibmq-components .ibmq-components__images #tablet-navbar[data-v-6640f917] {
+    margin: 0 0 2rem 0;
+  }
+  .ibmq- .ibmq-intro .work-button {
+    width: 240px;
+    height: 48px;
+    text-decoration: none;
+    background: #120f32;
+    margin: 2rem 2rem;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ibmq-introduction__content--title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 6rem 2rem 0 2rem;
+    padding: 0;
+  }
+  .ibmq-introduction__content--description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 2rem 2rem;
+    padding: 0;
+    width: 80%;
+  }
+  .ibmq-components .ibmq-components__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 6rem 2rem 0 2rem;
+    padding: 0;
+  }
+  .ibmq-projects-content .ibmq-projects-content__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 6rem 2rem 0 2rem;
+    padding: 0;
+  }
+  .ibmq-components .ibmq-components__description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 2rem 2rem;
+    padding: 0;
+    width: 80%;
+  }
+  .ibmq-projects-content .ibmq-projects-content__description {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 2rem 2em;
+    padding: 0;
+    width: 80%;
   }
 }
 </style>

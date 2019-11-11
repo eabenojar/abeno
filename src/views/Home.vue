@@ -1251,7 +1251,7 @@ export default {
     width: 100vw;
     /* background: lightsalmon; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
   }
