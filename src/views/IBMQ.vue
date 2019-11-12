@@ -30,10 +30,10 @@
       </div>
     </div>
     <div class="ibmq-projects-content">
-      <h1 class="ibmq-projects-content__title">Performance</h1>
+      <h1 class="ibmq-projects-content__title">Optimization</h1>
       <p
         class="ibmq-projects-content__description"
-      >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+      >As a front end developer, I was in charge of optimizing our website from performance, accessibility, best practices, and seo. These are the lighhouse scores showing before and after results. Our team converted the old site from Jquery/Vanilla.js to a Nuxt.js website. In the first year with the team, I built the following websites down below with Vue.js / Nuxt.js</p>
     </div>
     <div class="ibmq-projects">
       <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
@@ -117,10 +117,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "simulator.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "48/81",
+          accessibility: "83/100",
+          bestPractices: "64/71",
+          seo: "89/100"
         },
         {
           title: "Showcase",
@@ -128,10 +128,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "showcase.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "N/A",
+          accessibility: "N/A",
+          bestPractices: "N/A",
+          seo: "N/A"
         },
         {
           title: "System",
@@ -139,10 +139,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "system.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "17/80",
+          accessibility: "75/96",
+          bestPractices: "71/71",
+          seo: "90/100"
         },
         {
           title: "Members",
@@ -150,10 +150,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "members.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "64/90",
+          accessibility: "75/88",
+          bestPractices: "71/79",
+          seo: "78/90"
         },
         {
           title: "Researchers",
@@ -161,10 +161,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "researchers.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "31/84",
+          accessibility: "76/100",
+          bestPractices: "71/71",
+          seo: "90/100"
         },
         {
           title: "Overview",
@@ -172,10 +172,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "overview.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "53/81",
+          accessibility: "76/81",
+          bestPractices: "71/71",
+          seo: "78/90"
         },
         {
           title: "Internship",
@@ -183,10 +183,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "internship.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "83/91",
+          accessibility: "78/100",
+          bestPractices: "71/860",
+          seo: "78/100"
         },
         {
           title: "Consulting",
@@ -194,10 +194,10 @@ export default {
             "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
           image: "consulting.png",
 
-          performance: "40/50",
-          accessibility: "40/50",
-          bestPractices: "40/50",
-          seo: "40/50"
+          performance: "31/90",
+          accessibility: "76/96",
+          bestPractices: "71/71",
+          seo: "90/100"
         }
       ]
     };
@@ -293,7 +293,7 @@ export default {
   }
 }
 .ibmq-introduction {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -304,6 +304,8 @@ export default {
   .ibmq-introduction__image {
     width: 50vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
     position: relative;
   }
 }
@@ -327,7 +329,7 @@ export default {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 3rem;
-    margin: 6rem 0 0 0;
+    margin: 0;
     padding: 0 3rem;
   }
   .ibmq-components__description {
@@ -376,7 +378,10 @@ export default {
   }
 }
 .ibmq-projects {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 0;
   width: 100%;
   margin: 0;
   @include flex-grid(center, center);
@@ -400,7 +405,7 @@ export default {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   flex-direction: column;
-  background: blue;
+  background: none;
   border-radius: 4px;
 }
 
@@ -457,26 +462,26 @@ export default {
 }
 #macbook {
   position: absolute;
-  left: 5%;
+  left: 15%;
   bottom: calc(60% + 20px);
   animation: 3s ease 0s 1 fadeInDown;
 }
 #coffee-cup {
   position: absolute;
-  left: 60%;
+  left: auto;
   bottom: calc(60% + 20px);
   animation: 4s ease 0s 1 fadeInLeft;
 }
 #tall-monitor {
   position: absolute;
-  left: 40%;
+  left: 60%;
   bottom: calc(60% + 20px);
   animation: 2s ease 0s 1 fadeInDown;
 }
 #table-legs {
   position: absolute;
   bottom: calc(60% - 150px);
-  left: 12%;
+  left: auto;
   height: 150px;
   animation: 3s ease 0s 1 fadeInUp;
 }

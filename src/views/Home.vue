@@ -1,33 +1,15 @@
 <template>
   <div class="container">
-    <!-- <div class="main-container">
-      <div class="main-container__name">
-        <h1 class="name">First Lastname</h1>
-      </div>
-      <div class="main-container__shapes">
-        <div class="home-circle"></div>
-
-        <img class="home-laptop" src="../assets/images/Terminal.svg" alt />
-        <div class="home-laptop"></div>
-        <div class="button-container">
-          <button class="scroll-button" v-on:click="scrollToWorkTwo">Scroll</button>
-        </div>
-      </div>
-    </div>-->
-
     <div class="intro-container" id="intro-section">
-      <!-- <div class="main-header">
-        <h1 class="main-header__name">Eric Abenojar</h1>
-      </div>-->
       <div class="intro-container__description">
-        <h5 class="intro-container__sub-header">Hello!</h5>
+        <h5 class="intro-container__sub-header">Hello!!!</h5>
         <h2 class="intro-container__description--title">
           Eric
           <br />Abenojar
         </h2>
         <p
           class="intro-container__description--content"
-        >I am a front-end software engineer with a focus on developing beautiful interfaces and experiences</p>
+        >A front-end software engineer with a focus on developing beautiful interfaces and experiences</p>
       </div>
       <div class="intro-container__wireframe">
         <div class="intro-container__wireframe-images">
@@ -91,7 +73,7 @@
         </h2>
         <p
           class="work-container__description--content"
-        >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build server side rendering, high performance, and accessible websites.</p>
+        >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build server side rendering, high performing, and accessible websites.</p>
       </div>
       <div class="work-container__chalkboard">
         <div class="project-container__card active">
@@ -100,6 +82,14 @@
             <p
               class="project-container__card--description active"
             >Built the IBM Q marketing website using Vue.js and Nuxt.js</p>
+          </a>
+        </div>
+        <div class="project-container__card">
+          <a href="https://github.com/TiGaI/OmegaView" target="_blank">
+            <h1 class="project-container__card--title">Docbit</h1>
+            <p
+              class="project-container__card--description"
+            >Productivity app for tracking goals, activities, and performance. Built with React Native, Redux, and MongoDB. Developed / Design the front end with React and Figma.</p>
           </a>
         </div>
         <div class="project-container__card">
@@ -116,16 +106,7 @@
             <h1 class="project-container__card--title">Tesla Clone</h1>
             <p
               class="project-container__card--description"
-            >Built a react native mobile app that allows travelers to find unque experiences guided by a local.</p>
-          </a>
-        </div>
-
-        <div class="project-container__card">
-          <a href="https://travelplansus.herokuapp.com/" target="_blank">
-            <h1 class="project-container__card--title">Trip Planner</h1>
-            <p
-              class="project-container__card--description"
-            >Plan up to 5 trips with total distance, total time, and directions</p>
+            >Built a tesla clone with Vanilla.js, HTML, and CSS</p>
           </a>
         </div>
       </div>
@@ -822,6 +803,7 @@ export default {
   /* align-items: center; */
   img {
     width: calc(100% - 4rem);
+    max-width: 500px;
   }
 }
 
@@ -1439,6 +1421,7 @@ export default {
       /* align-items: center; */
       img {
         width: calc(100% - 4rem);
+        max-width: 500px;
       }
     }
     .about-container__stripes {
