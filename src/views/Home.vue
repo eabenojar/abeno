@@ -62,6 +62,9 @@
         <p
           class="about-container__description--content"
         >As a Mechanical Engineer from the University of Florida turned Front End Developer, I’ve always loved designing and engineering new products. I have experience building full stack applications, developing within a design system, and working with designers from UX/UI, Research, to Motion.</p>
+        <a href="https://www.linkedin.com/in/eric-abenojar-133138b3/" target="_blank">
+          <button class="work-button">Get in touch!</button>
+        </a>
       </div>
     </div>
 
@@ -102,11 +105,11 @@
         </div>
 
         <div class="project-container__card">
-          <a href="https://teslacloneapp.herokuapp.com/" target="_blank">
-            <h1 class="project-container__card--title">Tesla Clone</h1>
+          <a href="https://github.com/eabenojar/devsspots-app" target="_blank">
+            <h1 class="project-container__card--title">Devspots</h1>
             <p
               class="project-container__card--description"
-            >Built a tesla clone with Vanilla.js, HTML, and CSS</p>
+            >Built a React, Redux, Node, and MongoDB app that allows developers to meet other developers</p>
           </a>
         </div>
       </div>
@@ -529,7 +532,6 @@ export default {
 .desk {
   position: relative;
   margin: 2rem 0 0 0;
-  /* background: red; */
   width: 500px;
 }
 
@@ -543,7 +545,6 @@ export default {
   height: 100vh;
   width: 100vw;
   max-height: 900px;
-  /* background: lightsalmon; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -577,7 +578,6 @@ export default {
   height: 100vh;
   width: 100vw;
   max-height: 900px;
-  /* background: #fff; */
   display: flex;
   flex-direction: row;
 }
@@ -692,6 +692,34 @@ export default {
       font-size: 1.25rem;
       width: 100%;
     }
+  }
+}
+.work-button {
+  width: 240px;
+  height: 48px;
+  text-decoration: none;
+  background: #120f32;
+  margin: 1rem 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  button {
+    outline: none;
+  }
+}
+.work-button:hover {
+  height: 48px;
+  width: 240px;
+  background: #312985;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  button {
+    outline: none;
   }
 }
 #project-section {
