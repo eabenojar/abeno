@@ -204,14 +204,12 @@ export default {
   },
   methods: {
     getImage(pic) {
-      console.log("PATH", pic);
       // var images = require.context("../assets/", false, /\.svg$/);
       // return images("../assets/images/" + pic);
 
       // var image = require(pic);
       var image = require(`../assets/images/${pic}`);
 
-      console.log("IMAGE", image);
       return image;
     }
   }

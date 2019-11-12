@@ -77,7 +77,7 @@
       </div>
       <div class="work-container__chalkboard">
         <div class="project-container__card active">
-          <a href="https://www.ibm.com/quantum-computing/" target="_blank">
+          <a href="/ibmq">
             <h1 class="project-container__card--title active">IBM Quantum Computing</h1>
             <p
               class="project-container__card--description active"
@@ -97,7 +97,7 @@
             <h1 class="project-container__card--title">Mini Code Camp</h1>
             <p
               class="project-container__card--description"
-            >Built a developer meetup app using React, Redux, Node, and MongoDB</p>
+            >Built a front end crash course app using React, Redux, Node, and MongoDB</p>
           </a>
         </div>
 
@@ -120,9 +120,6 @@
       <img class="buildings" id="building-4" src="../assets/images/Building 4.svg" alt />-->
       <!-- </div> -->
     </div>
-    <!-- <div class="project-container" id="project-section">
-      <h1>Projects</h1>
-    </div>-->
   </div>
 </template>
 
@@ -219,9 +216,9 @@ export default {
     toWork() {
       this.$router.push("ibmq");
     },
-    redirectIBMQ() {
-      this.$router.push("ibmq");
-    },
+    // redirectIBMQ() {
+    //   this.$router.push("ibmq");
+    // },
     scrollToWork() {
       scrollTo(work, 0, 1250);
       function scrollTo(element, to, duration) {

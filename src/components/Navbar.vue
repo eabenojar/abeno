@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <ul>
+    <ul v-if="this.$router.currentRoute.fullPath !== '/ibmq'">
       <li>
         <a href="/">Home</a>
       </li>
@@ -9,6 +9,11 @@
       </li>
       <li>
         <a @click="scrollClicked(`project-section`)">Work</a>
+      </li>
+    </ul>
+    <ul v-else-if="this.$router.currentRoute.fullPath === '/ibmq'">
+      <li>
+        <a href="/">Home</a>
       </li>
     </ul>
   </div>
@@ -31,6 +36,9 @@ export default {
       var elmnt = document.getElementById(id);
       scrollTo(document.body, elmnt.offsetTop, 2000);
     }
+  },
+  mounted() {
+    console.log("PATH", this.$router.currentRoute.fullPath);
   }
 };
 </script>
