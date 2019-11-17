@@ -70,10 +70,7 @@
 
     <div class="project-container" id="project-section">
       <div class="work-container__description">
-        <h2 class="work-container__description--title">
-          Wireframe to
-          <br />product
-        </h2>
+        <h2 class="work-container__description--title">Work</h2>
         <p
           class="work-container__description--content"
         >As a Front End Developer on IBM Q, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build server side rendering, high performing, and accessible websites.</p>
@@ -113,16 +110,16 @@
           </a>
         </div>
       </div>
-      <!-- <div class="buildings-container">
-        <img class="buildings" id="building-1" src="../assets/images/Building 1.svg" alt />
-        <img class="buildings" id="building-1A" src="../assets/images/Building 1.1.svg" alt />
-        <img class="buildings" id="building-2" src="../assets/images/Building 2.svg" alt />
-        <img class="buildings" id="building-2A" src="../assets/images/Building 2.1.svg" alt />
-        <img class="buildings" id="building-3" src="../assets/images/Building 3.svg" alt />
-        <img class="buildings" id="building-3A" src="../assets/images/Building 3.1.svg" alt />
-      <img class="buildings" id="building-4" src="../assets/images/Building 4.svg" alt />-->
-      <!-- </div> -->
     </div>
+    <!-- <div class="buildings-container">
+      <img class="buildings" id="building-1" src="../assets/images/Building 1.svg" alt />
+      <img class="buildings" id="building-1A" src="../assets/images/Building 1.1.svg" alt />
+      <img class="buildings" id="building-2" src="../assets/images/Building 2.svg" alt />
+      <img class="buildings" id="building-2A" src="../assets/images/Building 2.1.svg" alt />
+      <img class="buildings" id="building-3" src="../assets/images/Building 3.svg" alt />
+      <img class="buildings" id="building-3A" src="../assets/images/Building 3.1.svg" alt />
+      <img class="buildings" id="building-4" src="../assets/images/Building 4.svg" alt />
+    </div>-->
   </div>
 </template>
 
@@ -891,10 +888,10 @@ export default {
 }
 
 .buildings-container {
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
-  height: 200px;
+  height: 100px;
   width: 100vw;
 }
 .buildings {
@@ -904,39 +901,39 @@ export default {
   right: 0;
 }
 .building-1-animate {
-  right: 700px;
+  left: 800px;
   z-index: 1000;
   animation: 1.5s ease 0s 1 fadeInTop;
 }
 .building-1A-animate {
   z-index: -1000;
-  right: 600px;
+  left: 700px;
   animation: 1.75s ease 0s 1 fadeInTop;
 }
 .building-2-animate {
-  right: 280px;
+  left: 320px;
   z-index: 1000;
   animation: 2s ease 0s 1 fadeInTop;
 }
 .building-2A-animate {
   z-index: -1000;
-  right: 380px;
+  left: 430px;
   animation: 2.5s ease 0s 1 fadeInTop;
 }
 .building-3-animate {
-  right: 440px;
+  left: 500px;
   z-index: 1000;
   animation: 2.75s ease 0s 1 fadeInTop;
 }
 .building-3A-animate {
   z-index: -1000;
-  right: 220px;
+  left: 260px;
   animation: 3s ease 0s 1 fadeInTop;
 }
 
 .building-4-animate {
   z-index: 1000;
-  right: 10px;
+  left: 0px;
   animation: 3.5s ease 0s 1 fadeInTop;
 }
 

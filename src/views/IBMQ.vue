@@ -7,7 +7,7 @@
           class="ibmq-introduction__content--description"
         >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
         <a href="https://www.ibm.com/quantum-computing/" target="_blank">
-          <button class="work-button">See my work on IBM Q</button>
+          <button class="work-button">Launch site</button>
         </a>
       </div>
       <div class="ibmq-introduction__image">
@@ -632,6 +632,7 @@ export default {
       margin: 2rem 0 0 0;
       padding: 0 3rem;
       width: 80%;
+      line-height: 1.25;
     }
   }
 }
