@@ -19,10 +19,18 @@
       </div>
     </div>
     <div class="ibmq-components">
-      <h1 class="ibmq-components__title">Components</h1>
-      <p
-        class="ibmq-components__description"
-      >On the IBM Q web team, I developed components for our site using Vue.js. I worked with UX and Visual designers to turn wireframes into final components.</p>
+      <div class="ibmq-components__intro">
+        <h1 class="ibmq-components__title">COMPONENTS</h1>
+        <p
+          class="ibmq-components__description"
+        >On the IBM Q web team, I developed components for our site using Vue.js. I developed a reusable navbar, footer, and carousel component for our website. I worked with UX and Visual designers to turn wireframes into final components.</p>
+      </div>
+
+      <div class="ibmq-components__tabs">
+        <button>DESKTOP</button>
+        <button>TABLET</button>
+        <button>MOBILE</button>
+      </div>
       <div class="ibmq-components__images">
         <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
         <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
@@ -317,29 +325,57 @@ export default {
 }
 .ibmq-introduction__content--description {
   font-family: Montserrat, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 1.25rem;
   margin: 2rem 0 0 0;
   padding: 0 3rem;
 }
 .ibmq-components {
+  display: flex;
+  flex-wrap: wrap;
+  .ibmq-components__intro {
+    width: 100%;
+    margin: 2rem 0;
+  }
   .ibmq-components__title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     padding: 0 3rem;
   }
   .ibmq-components__description {
     font-family: Montserrat, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 0 0 0;
     padding: 0 3rem;
-    width: 50%;
+    width: 40%;
+  }
+  .ibmq-components__tabs {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      text-align: left;
+      padding: 0 1rem;
+      width: 250px;
+      height: 50px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 5px 3rem;
+      color: #284dcf;
+      background-color: #fff;
+      border: none;
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+    }
   }
   .ibmq-components__images {
-    width: 100%;
+    width: 80%;
+    background: lightgray;
     height: auto;
     display: flex;
     justify-content: center;
