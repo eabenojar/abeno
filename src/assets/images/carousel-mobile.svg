@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="480px" viewBox="0 0 320 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>sm-320px-4 column copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="11 8 6 13 5.293 12.293 9.586 8 5.293 3.707 6 3"></polygon>
+        <polygon id="path-3" points="11 8 6 13 5.293 12.293 9.586 8 5.293 3.707 6 3"></polygon>
+    </defs>
+    <g id="sm-320px-4-column-copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-61" fill="#171717" fill-rule="nonzero" x="0" y="0" width="320" height="478"></rect>
+        <text id="Launch-of-IBM-Q" font-family="IBMPlexSans, IBM Plex Sans" font-size="20" font-weight="normal" line-spacing="26" fill="#FFFFFF">
+            <tspan x="16" y="85">Launch of IBM Q</tspan>
+        </text>
+        <text id="The-first-industry-i" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.100000001" fill="#FFFFFF">
+            <tspan x="16" y="150">The first industry initiative to build </tspan>
+            <tspan x="16" y="170">commercially available universal quantum </tspan>
+            <tspan x="16" y="190">computing systems is unveiled. IBM Q </tspan>
+            <tspan x="16" y="210">systems will be designed to tackle problems </tspan>
+            <tspan x="16" y="230">currently seen as too complex and </tspan>
+            <tspan x="16" y="250">experimental in nature for classical </tspan>
+            <tspan x="16" y="270">computing to handle. The goal is to </tspan>
+            <tspan x="16" y="290">demonstrate the viability of quantum </tspan>
+            <tspan x="16" y="310">computing and its utility across industries.</tspan>
+        </text>
+        <rect id="Rectangle-Copy-69" stroke="#171717" fill="#3D3D3D" x="30.5" y="413.5" width="258" height="65"></rect>
+        <text id="2017-March" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="18" fill="#FFFFFF">
+            <tspan x="47" y="444">2017</tspan>
+            <tspan x="51.16" y="464.904053" font-size="12">March</tspan>
+        </text>
+        <text id="1-of-16" font-family="IBMPlexSans, IBM Plex Sans" font-size="12" font-weight="normal" line-spacing="18" letter-spacing="0.08571429" fill="#A4A4A4">
+            <tspan x="16" y="392">1 of 16</tspan>
+        </text>
+        <rect id="Rectangle-Copy-5" stroke="#171717" fill="#3D3D3D" x="-0.5" y="413.5" width="33" height="65"></rect>
+        <rect id="Rectangle-Copy-6" stroke="#171717" fill="#3D3D3D" x="287.5" y="413.5" width="33" height="65"></rect>
+        <g id="icons/pagination/ibm-next-link" transform="translate(16.000000, 446.000000) scale(-1, 1) translate(-16.000000, -446.000000) translate(8.000000, 438.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="icon-color" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="icons/pagination/ibm-next-link" transform="translate(296.000000, 438.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="icon-color" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+        </g>
+        <text id="2017" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.100000001" fill="#FFFFFF">
+            <tspan x="16" y="62">2017</tspan>
+        </text>
+    </g>
+</svg>

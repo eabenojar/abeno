@@ -27,18 +27,34 @@
       </div>
 
       <div class="ibmq-components__tabs">
-        <button>DESKTOP</button>
-        <button>TABLET</button>
-        <button>MOBILE</button>
+        <button
+          @click="tabClicked(0)"
+          :class="isTabClicked === 0 ? 'active-tab' : 'tab-button'"
+        >DESKTOP</button>
+        <button
+          @click="tabClicked(1)"
+          :class="isTabClicked === 1 ? 'active-tab' : 'tab-button'"
+        >TABLET</button>
+        <button
+          @click="tabClicked(2)"
+          :class="isTabClicked === 2 ? 'active-tab' : 'tab-button'"
+        >MOBILE</button>
       </div>
-      <div class="ibmq-components__images">
+      <div v-if="isTabClicked === 0" class="ibmq-components__images">
         <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
+        <img id="tablet-navbar" src="../assets/images/carousel-desktop.svg" alt />
+      </div>
+      <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
         <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
+        <img id="mobile-navbar" src="../assets/images/carousel-tablet.svg" alt />
+      </div>
+      <div v-else-if="isTabClicked === 2" class="ibmq-components__images">
         <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
+        <img id="tablet-navbar" src="../assets/images/carousel-mobile.svg" alt />
       </div>
     </div>
     <div class="ibmq-projects-content">
-      <h1 class="ibmq-projects-content__title">Optimization</h1>
+      <h1 class="ibmq-projects-content__title">OPTIMIZATION</h1>
       <p
         class="ibmq-projects-content__description"
       >As a front end developer, I was in charge of optimizing our website from performance, accessibility, best practices, and seo. These are the lighhouse scores showing before and after results. Our team converted the old site from Jquery/Vanilla.js to a Nuxt.js website. In the first year with the team, I built the following websites down below with Vue.js / Nuxt.js</p>
@@ -75,6 +91,7 @@
 export default {
   data() {
     return {
+      isTabClicked: 0,
       projects: [
         {
           title: "IBM Homepage",
@@ -211,6 +228,10 @@ export default {
     };
   },
   methods: {
+    tabClicked(value) {
+      console.log("CLICKED", value);
+      this.isTabClicked = value;
+    },
     getImage(pic) {
       // var images = require.context("../assets/", false, /\.svg$/);
       // return images("../assets/images/" + pic);
@@ -239,29 +260,29 @@ export default {
   background: #f1f3f5;
   background-image: -webkit-repeating-radial-gradient(
     center center,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
     transparent 1px,
     transparent 100%
   );
   background-image: -moz-repeating-radial-gradient(
     center center,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
     transparent 1px,
     transparent 100%
   );
   background-image: -ms-repeating-radial-gradient(
     center center,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
     transparent 1px,
     transparent 100%
   );
   background-image: repeating-radial-gradient(
     center center,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
     transparent 1px,
     transparent 100%
   );
@@ -357,8 +378,8 @@ export default {
     height: auto;
     display: flex;
     flex-direction: column;
-
-    button {
+    .active-tab {
+      background-color: #fff;
       text-align: left;
       padding: 0 1rem;
       width: 250px;
@@ -366,16 +387,38 @@ export default {
       font-family: Montserrat, sans-serif;
       font-weight: 600;
       font-size: 0.8rem;
-      margin: 5px 3rem;
+      margin: 0.25rem 3rem;
       color: #284dcf;
-      background-color: #fff;
       border: none;
       box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+      &:focus {
+        outline: none;
+      }
+    }
+    .tab-button {
+      text-align: left;
+      padding: 0 1rem;
+      width: 250px;
+      height: 50px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 0.25rem 3rem;
+      color: #284dcf;
+      background: none;
+      border: none;
+      &:hover {
+        // background-color: #fff;
+        // box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
     }
   }
   .ibmq-components__images {
     width: 80%;
-    background: lightgray;
     height: auto;
     display: flex;
     justify-content: center;
@@ -398,13 +441,13 @@ export default {
   .ibmq-projects-content__title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 6rem 0 0 0;
     padding: 0 3rem;
   }
   .ibmq-projects-content__description {
     font-family: Montserrat, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 0 0 0;
     padding: 0 3rem;
