@@ -46,11 +46,11 @@
       </div>
       <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
         <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
-        <img id="mobile-navbar" src="../assets/images/carousel-tablet.svg" alt />
+        <img id="tablet-carousel" src="../assets/images/carousel-tablet.svg" alt />
       </div>
       <div v-else-if="isTabClicked === 2" class="ibmq-components__images">
         <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
-        <img id="tablet-navbar" src="../assets/images/carousel-mobile.svg" alt />
+        <img id="mobile-carousel" src="../assets/images/carousel-mobile.svg" alt />
       </div>
     </div>
     <div class="ibmq-projects-content">
@@ -431,6 +431,15 @@ export default {
     }
     #tablet-navbar {
       margin: 0 2rem 0 0;
+      max-width: 450px;
+    }
+    #tablet-carousel {
+      max-width: 450px;
+    }
+
+    #mobile-carousel {
+      max-width: 320px;
+      margin: 0 2rem;
     }
     #mobile-navbar {
       margin: 0;
@@ -593,6 +602,103 @@ export default {
   }
 }
 @media only screen and (max-width: 960px) {
+  .ibmq-components {
+    display: flex;
+    flex-wrap: wrap;
+    .ibmq-components__intro {
+      width: 100%;
+      margin: 2rem 0;
+    }
+    .ibmq-components__title {
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0 3rem;
+    }
+    .ibmq-components__description {
+      font-family: Montserrat, sans-serif;
+      font-weight: 200;
+      font-size: 1.25rem;
+      margin: 2rem 0 0 0;
+      padding: 0 3rem;
+      width: 70%;
+    }
+    .ibmq-components__tabs {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .active-tab {
+        background-color: #fff;
+        text-align: left;
+        padding: 0 1rem;
+        width: 250px;
+        height: 50px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin: 0.25rem 3rem;
+        color: #284dcf;
+        border: none;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+        &:focus {
+          outline: none;
+        }
+      }
+      .tab-button {
+        text-align: left;
+        padding: 0 1rem;
+        width: 250px;
+        height: 50px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin: 0.25rem 3rem;
+        color: #284dcf;
+        background: none;
+        border: none;
+        &:hover {
+          // background-color: #fff;
+          // box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .ibmq-components__images {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      // flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      #desktop-navbar {
+        width: 80%;
+        margin: 4rem 0 2rem 0;
+      }
+      #tablet-navbar {
+        margin: 0 2rem 0 0;
+        max-width: 450px;
+      }
+      #tablet-carousel {
+        max-width: 450px;
+      }
+
+      #mobile-carousel {
+        max-width: 320px;
+        margin: 0 2rem;
+      }
+      #mobile-navbar {
+        margin: 0;
+      }
+    }
+  }
+
   .ibmq-projects {
     min-height: 100vh;
     height: auto;
