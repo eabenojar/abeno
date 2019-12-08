@@ -1303,7 +1303,7 @@ export default {
         #wireframe {
           position: absolute;
           // width: 100%;
-          top: 0;
+          top: 2rem;
           left: auto;
           animation: 1.5s ease 0s 1 fadeInUp;
         }
@@ -1444,6 +1444,7 @@ export default {
       img {
         width: calc(100% - 4rem);
         max-width: 500px;
+        margin: 1.5rem;
       }
     }
     .about-container__stripes {

@@ -1,85 +1,87 @@
 <template>
   <div class="ibmq-container">
-    <div class="ibmq-introduction">
-      <div class="ibmq-introduction__content">
-        <h1 class="ibmq-introduction__content--title">IBM Q</h1>
-        <p
-          class="ibmq-introduction__content--description"
-        >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
-        <a href="https://www.ibm.com/quantum-computing/" target="_blank">
-          <button class="work-button">Launch site</button>
-        </a>
+    <div class="ibmq-desktop-container">
+      <div class="ibmq-introduction">
+        <div class="ibmq-introduction__content">
+          <h1 class="ibmq-introduction__content--title">IBM Q</h1>
+          <p
+            class="ibmq-introduction__content--description"
+          >As a Front End Developer at IBM, I am in charge of developing websites for the IBM Quantum Computing marketing team. I use Vue.js with Nuxt.js to build a server side rendering high performance websites.</p>
+          <a href="https://www.ibm.com/quantum-computing/" target="_blank">
+            <button class="work-button">Launch site</button>
+          </a>
+        </div>
+        <div class="ibmq-introduction__image">
+          <img id="table" src="../assets/images/Table.svg" alt />
+          <img id="macbook" src="../assets/images/MacbookDesktop.svg" alt />
+          <img id="table-legs" src="../assets/images/TableLegs.svg" alt />
+          <img id="tall-monitor" src="../assets/images/TallMonitorMain.svg" alt />
+          <img id="coffee-cup" src="../assets/images/CoffeeCup.svg" alt />
+        </div>
       </div>
-      <div class="ibmq-introduction__image">
-        <img id="table" src="../assets/images/Table.svg" alt />
-        <img id="macbook" src="../assets/images/MacbookDesktop.svg" alt />
-        <img id="table-legs" src="../assets/images/TableLegs.svg" alt />
-        <img id="tall-monitor" src="../assets/images/TallMonitorMain.svg" alt />
-        <img id="coffee-cup" src="../assets/images/CoffeeCup.svg" alt />
-      </div>
-    </div>
-    <div class="ibmq-components">
-      <div class="ibmq-components__intro">
-        <h1 class="ibmq-components__title">COMPONENTS</h1>
-        <p
-          class="ibmq-components__description"
-        >On the IBM Q web team, I developed components for our site using Vue.js. I developed a reusable navbar, footer, and carousel component for our website. I worked with UX and Visual designers to turn wireframes into final components.</p>
-      </div>
+      <div class="ibmq-components">
+        <div class="ibmq-components__intro">
+          <h1 class="ibmq-components__title">COMPONENTS</h1>
+          <p
+            class="ibmq-components__description"
+          >On the IBM Q web team, I developed components for our site using Vue.js. I developed a reusable navbar, footer, and carousel component for our website. I worked with UX and Visual designers to turn wireframes into final components.</p>
+        </div>
 
-      <div class="ibmq-components__tabs">
-        <button
-          @click="tabClicked(0)"
-          :class="isTabClicked === 0 ? 'active-tab' : 'tab-button'"
-        >DESKTOP</button>
-        <button
-          @click="tabClicked(1)"
-          :class="isTabClicked === 1 ? 'active-tab' : 'tab-button'"
-        >TABLET</button>
-        <button
-          @click="tabClicked(2)"
-          :class="isTabClicked === 2 ? 'active-tab' : 'tab-button'"
-        >MOBILE</button>
+        <div class="ibmq-components__tabs">
+          <button
+            @click="tabClicked(0)"
+            :class="isTabClicked === 0 ? 'active-tab' : 'tab-button'"
+          >DESKTOP</button>
+          <button
+            @click="tabClicked(1)"
+            :class="isTabClicked === 1 ? 'active-tab' : 'tab-button'"
+          >TABLET</button>
+          <button
+            @click="tabClicked(2)"
+            :class="isTabClicked === 2 ? 'active-tab' : 'tab-button'"
+          >MOBILE</button>
+        </div>
+        <div v-if="isTabClicked === 0" class="ibmq-components__images">
+          <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
+          <img id="tablet-navbar" src="../assets/images/carousel-desktop.svg" alt />
+        </div>
+        <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
+          <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
+          <img id="tablet-carousel" src="../assets/images/carousel-tablet.svg" alt />
+        </div>
+        <div v-else-if="isTabClicked === 2" class="ibmq-components__images">
+          <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
+          <img id="mobile-carousel" src="../assets/images/carousel-mobile.svg" alt />
+        </div>
       </div>
-      <div v-if="isTabClicked === 0" class="ibmq-components__images">
-        <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
-        <img id="tablet-navbar" src="../assets/images/carousel-desktop.svg" alt />
+      <div class="ibmq-projects-content">
+        <h1 class="ibmq-projects-content__title">OPTIMIZATION</h1>
+        <p
+          class="ibmq-projects-content__description"
+        >As a front end developer, I was in charge of optimizing our website from performance, accessibility, best practices, and seo. These are the lighhouse scores showing before and after results. Our team converted the old site from Jquery/Vanilla.js to a Nuxt.js website. In the first year with the team, I built the following websites down below with Vue.js / Nuxt.js</p>
       </div>
-      <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
-        <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
-        <img id="tablet-carousel" src="../assets/images/carousel-tablet.svg" alt />
-      </div>
-      <div v-else-if="isTabClicked === 2" class="ibmq-components__images">
-        <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
-        <img id="mobile-carousel" src="../assets/images/carousel-mobile.svg" alt />
-      </div>
-    </div>
-    <div class="ibmq-projects-content">
-      <h1 class="ibmq-projects-content__title">OPTIMIZATION</h1>
-      <p
-        class="ibmq-projects-content__description"
-      >As a front end developer, I was in charge of optimizing our website from performance, accessibility, best practices, and seo. These are the lighhouse scores showing before and after results. Our team converted the old site from Jquery/Vanilla.js to a Nuxt.js website. In the first year with the team, I built the following websites down below with Vue.js / Nuxt.js</p>
-    </div>
-    <div class="ibmq-projects">
-      <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
-        <img class="ibmq-projects__box--image" :src="getImage(item.image)" alt />
-        <h1 class="ibmq-projects__box--title">{{item.title}}</h1>
-        <p class="ibmq-projects__box--description">{{item.description}}</p>
-        <div class="ibmq-projects-metrics">
-          <div class="ibmq-projects-metrics-box">
-            <h5>{{item.performance}}</h5>
-            <p>Performance</p>
-          </div>
-          <div class="ibmq-projects-metrics-box">
-            <h5>{{item.accessibility}}</h5>
-            <p>Accessibility</p>
-          </div>
-          <div class="ibmq-projects-metrics-box">
-            <h5>{{item.bestPractices}}</h5>
-            <p>Best Practices</p>
-          </div>
-          <div class="ibmq-projects-metrics-box">
-            <h5>{{item.seo}}</h5>
-            <p>Seo</p>
+      <div class="ibmq-projects">
+        <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
+          <img class="ibmq-projects__box--image" :src="getImage(item.image)" alt />
+          <h1 class="ibmq-projects__box--title">{{item.title}}</h1>
+          <p class="ibmq-projects__box--description">{{item.description}}</p>
+          <div class="ibmq-projects-metrics">
+            <div class="ibmq-projects-metrics-box">
+              <h5>{{item.performance}}</h5>
+              <p>Performance</p>
+            </div>
+            <div class="ibmq-projects-metrics-box">
+              <h5>{{item.accessibility}}</h5>
+              <p>Accessibility</p>
+            </div>
+            <div class="ibmq-projects-metrics-box">
+              <h5>{{item.bestPractices}}</h5>
+              <p>Best Practices</p>
+            </div>
+            <div class="ibmq-projects-metrics-box">
+              <h5>{{item.seo}}</h5>
+              <p>Seo</p>
+            </div>
           </div>
         </div>
       </div>
@@ -247,6 +249,17 @@ export default {
 
 
 <style scoped lang="scss">
+@media only screen and (min-width: 1584px) {
+  .ibmq-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .ibmq-desktop-container {
+    max-width: 1584px;
+    margin: auto 0;
+  }
+}
 @mixin flex-grid($justify, $align) {
   display: flex;
   justify-content: center;
@@ -321,7 +334,7 @@ export default {
 }
 .ibmq-introduction {
   height: 95vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   .ibmq-introduction__content {
@@ -430,7 +443,7 @@ export default {
       margin: 4rem 0 2rem 0;
     }
     #tablet-navbar {
-      margin: 0 2rem 0 0;
+      margin: 2rem;
       max-width: 450px;
     }
     #tablet-carousel {
@@ -442,7 +455,7 @@ export default {
       margin: 0 2rem;
     }
     #mobile-navbar {
-      margin: 0;
+      margin: 0 0 2rem 0;
     }
   }
 }
@@ -601,6 +614,7 @@ export default {
     transform: translateY(0);
   }
 }
+
 @media only screen and (max-width: 960px) {
   .ibmq-components {
     display: flex;
@@ -674,7 +688,7 @@ export default {
       height: auto;
       display: flex;
       justify-content: center;
-      // flex-direction: column;
+      padding: 0 3rem;
       align-items: center;
       flex-wrap: wrap;
       #desktop-navbar {
@@ -682,7 +696,7 @@ export default {
         margin: 4rem 0 2rem 0;
       }
       #tablet-navbar {
-        margin: 0 2rem 0 0;
+        margin: 2rem;
         max-width: 450px;
       }
       #tablet-carousel {
@@ -694,7 +708,7 @@ export default {
         margin: 0 2rem;
       }
       #mobile-navbar {
-        margin: 0;
+        margin: 2rem 0;
       }
     }
   }
@@ -755,7 +769,7 @@ export default {
     #mobile-navbar {
       width: 80%;
       max-width: 300px;
-      margin: 2rem;
+      margin: 2rem 0;
     }
   }
   #table {
@@ -830,6 +844,7 @@ export default {
     .ibmq-introduction__content {
       width: 100vw;
       height: 100vh;
+      padding: 0 2rem;
     }
     .ibmq-introduction__image {
       width: 60%;
@@ -915,23 +930,27 @@ export default {
       align-items: center;
       flex-wrap: wrap;
       #desktop-navbar {
-        width: 80%;
+        width: 90%;
         margin: 4rem 0 2rem 0;
       }
       #tablet-navbar {
         margin: 0 2rem 0 0;
-        max-width: 450px;
+        max-width: 320px;
+        width: 90%;
       }
       #tablet-carousel {
-        max-width: 450px;
+        max-width: 320px;
+        width: 90%;
       }
 
       #mobile-carousel {
         max-width: 320px;
         margin: 0 2rem;
+        width: 90%;
       }
       #mobile-navbar {
-        margin: 0;
+        margin: 2rem 0;
+        width: 90%;
       }
     }
   }
@@ -944,16 +963,17 @@ export default {
     display: none;
   }
   .ibmq-introduction .ibmq-introduction__content {
-    width: 100vw;
+    width: 100%;
     height: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
   }
   .work-button {
-    margin: 1rem 2rem;
+    margin: 1rem 0;
   }
   .ibmq-introduction {
     max-height: 100vh;
     height: auto;
-    width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -980,35 +1000,35 @@ export default {
   .ibmq-introduction__content--title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
-    margin: 4rem 2rem 0 2rem;
+    font-size: 1.5rem;
+    margin: 2rem 0 0 0;
     padding: 0;
   }
   .ibmq-introduction__content--description {
     font-family: Montserrat, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.25rem;
-    margin: 2rem 2rem;
+    margin: 2rem 0;
     padding: 0;
-    width: 90%;
+    width: 80%;
   }
   .ibmq-components .ibmq-components__title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: 6rem 2rem 0 2rem;
     padding: 0;
   }
   .ibmq-projects-content .ibmq-projects-content__title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: 6rem 2rem 0 2rem;
     padding: 0;
   }
   .ibmq-components .ibmq-components__description {
     font-family: Montserrat, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 2rem;
     padding: 0;
@@ -1016,7 +1036,7 @@ export default {
   }
   .ibmq-projects-content .ibmq-projects-content__description {
     font-family: Montserrat, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 2em;
     padding: 0;
