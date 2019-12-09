@@ -442,6 +442,10 @@ export default {
       width: 80%;
       margin: 4rem 0 2rem 0;
     }
+    #desktop-carousel {
+      margin: 2rem;
+      width: 80%;
+    }
     #tablet-navbar {
       margin: 2rem;
       max-width: 450px;
