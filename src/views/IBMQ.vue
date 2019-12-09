@@ -43,7 +43,7 @@
         </div>
         <div v-if="isTabClicked === 0" class="ibmq-components__images">
           <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
-          <img id="tablet-navbar" src="../assets/images/carousel-desktop.svg" alt />
+          <img id="desktop-carousel" src="../assets/images/carousel-desktop.svg" alt />
         </div>
         <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
           <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
@@ -836,6 +836,56 @@ export default {
   }
 }
 @media only screen and (max-width: 540px) {
+  .ibmq-projects {
+    min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin: 0;
+    @include flex-grid(center, center);
+    flex-direction: column;
+    // flex-wrap: wrap;
+
+    .ibmq-projects__box--title,
+    .ibmq-projects__box--description {
+      color: #fff;
+      margin: 2rem 1rem 2rem 1rem;
+      top: 2rem;
+      font-family: Montserrat, sans-serif;
+      z-index: 1000;
+      position: relative;
+    }
+  }
+
+  .ibmq-projects-metrics {
+    position: absolute;
+    bottom: -50px;
+    right: 2.5%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    width: 95%;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    .ibmq-projects-metrics-box {
+      width: 25%;
+      text-align: left;
+      padding-left: 1rem;
+      h5 {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+      }
+      p {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        font-size: 0.65rem;
+      }
+    }
+  }
   .ibmq-introduction {
     height: 100vh;
     width: 100vw;
@@ -930,19 +980,21 @@ export default {
       align-items: center;
       flex-wrap: wrap;
       #desktop-navbar {
-        width: 90%;
+        width: 100%;
         margin: 4rem 0 2rem 0;
       }
-      #tablet-navbar {
-        margin: 0 2rem 0 0;
+      #desktop-carousel {
+        margin: 0;
         max-width: 320px;
-        width: 90%;
+        width: 100%;
       }
       #tablet-carousel {
         max-width: 320px;
-        width: 90%;
+        width: 100%;
       }
-
+      #tablet-navbar {
+        width: 100%;
+      }
       #mobile-carousel {
         max-width: 320px;
         margin: 0 2rem;
