@@ -20,12 +20,17 @@
       <ul>
         <li>
           <a href>
-            <i></i>Home
+            <i></i>HOME
           </a>
         </li>
         <li>
-          <a href>
-            <i></i>About
+          <a @click="scrollClicked(`about-section`)">
+            <i></i>ABOUT
+          </a>
+        </li>
+        <li>
+          <a @click="scrollClicked(`project-section`)">
+            <i></i>WORK
           </a>
         </li>
       </ul>
@@ -83,7 +88,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 .container {
   width: 95%;
   max-width: 1000px;
@@ -279,6 +284,39 @@ ul li a {
     list-style-type: none;
     margin: 0;
     float: left;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .tablet-mobile-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #4c628d;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    /* clip-path: circle(0px at top right); */
+    /* transition: clip-path ease-in-out 700ms; */
+    ul {
+      padding: 0;
+      width: 100%;
+      li {
+        display: block;
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        margin: 2rem 0;
+        font-size: 1rem;
+        padding: 0 1rem;
+        color: white;
+        a {
+          display: block;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 </style>
