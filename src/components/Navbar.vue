@@ -36,8 +36,21 @@
       </ul>
     </nav>
 
-    <div class="menu-toggle" id="menu-toggle" @click="openNav()" v-if="deviceWidth <= 992">
+    <div
+      class="menu-toggle"
+      id="menu-toggle"
+      @click="openNav()"
+      v-if="deviceWidth <= 992 && !isNavOpen"
+    >
       <div class="hamburger"></div>
+    </div>
+    <div
+      class="close-menu-toggle"
+      id="close-menu-toggle"
+      @click="openNav()"
+      v-if="deviceWidth <= 992 && isNavOpen"
+    >
+      <div class="close-nav"></div>
     </div>
   </div>
 </template>
@@ -64,6 +77,7 @@ export default {
     scrollClicked(id) {
       var elmnt = document.getElementById(id);
       scrollTo(document.body, elmnt.offsetTop, 2000);
+      this.isNavOpen = !this.isNavOpen;
     },
     openNav() {
       this.isNavOpen = !this.isNavOpen;
@@ -189,6 +203,13 @@ header::after {
   right: 0.5em;
   cursor: pointer;
 }
+.close-menu-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.25rem;
+  font-size: 30px;
+  cursor: pointer;
+}
 
 .hamburger,
 .hamburger::before,
@@ -220,6 +241,12 @@ header::after {
 
 .open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
+}
+.close-nav:after {
+  display: inline-block;
+  content: "\00d7"; /* This will render the 'X' */
+  color: #4c628d;
+  height: 35px;
 }
 
 @media (min-width: 700px) {
