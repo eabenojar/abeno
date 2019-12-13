@@ -138,7 +138,7 @@ header::after {
   top: 60px;
   right: 0;
   background-color: #4c628d;
-  width: 300px;
+  width: 280px;
   z-index: 10000;
   height: 450px;
   /* clip-path: circle(0px at top right); */
@@ -289,6 +289,7 @@ header::after {
   justify-content: flex-end;
   background: none;
   z-index: 10000;
+  position: fixed;
 }
 ul {
   list-style-type: none;
@@ -306,6 +307,41 @@ ul li a {
   text-decoration: none;
   color: #000;
 }
+@media only screen and (max-width: 992px) {
+  .tablet-mobile-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #4c628d;
+    width: 300px;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 400px;
+    overflow: hidden;
+    /* clip-path: circle(0px at top right); */
+    /* transition: clip-path ease-in-out 700ms; */
+    ul {
+      padding: 0;
+      width: 100%;
+      margin: 0 1rem;
+      li {
+        display: block;
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        margin: 2rem 0;
+        font-size: 1rem;
+        padding: 0 1rem;
+        color: white;
+        a {
+          display: block;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   ul {
     list-style-type: none;
@@ -314,6 +350,9 @@ ul li a {
   }
 }
 @media only screen and (max-width: 540px) {
+  .navbar {
+    position: absolute;
+  }
   .tablet-mobile-nav {
     position: absolute;
     top: 60px;
@@ -324,9 +363,8 @@ ul li a {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100%;
-    /* clip-path: circle(0px at top right); */
-    /* transition: clip-path ease-in-out 700ms; */
+    height: 100vh;
+    overflow: hidden;
     ul {
       padding: 0;
       width: 100%;
