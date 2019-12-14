@@ -16,7 +16,10 @@
         <a href="/">Home</a>
       </li>
     </ul>
-    <nav class="tablet-mobile-nav" v-else-if="isNavOpen && deviceWidth <= 992">
+    <nav
+      class="tablet-mobile-nav"
+      v-else-if="this.$router.currentRoute.fullPath !== '/ibmq' && isNavOpen && deviceWidth <= 992 "
+    >
       <ul>
         <li>
           <a href>
@@ -40,7 +43,7 @@
       class="menu-toggle"
       id="menu-toggle"
       @click="openNav()"
-      v-if="deviceWidth <= 992 && !isNavOpen"
+      v-if="deviceWidth <= 992 && !isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
     >
       <div class="hamburger"></div>
     </div>
@@ -48,7 +51,7 @@
       class="close-menu-toggle"
       id="close-menu-toggle"
       @click="openNav()"
-      v-if="deviceWidth <= 992 && isNavOpen"
+      v-if="deviceWidth <= 992 && isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
     >
       <div class="close-nav"></div>
     </div>
@@ -60,7 +63,8 @@ export default {
   data() {
     return {
       isNavOpen: false,
-      deviceWidth: 0
+      deviceWidth: 0,
+      urlPath: ""
     };
   },
   methods: {
@@ -97,6 +101,12 @@ export default {
   },
   mounted() {
     console.log("PATH", this.$router.currentRoute.fullPath);
+    this.urlPath = window.location.pathname;
+    console.log(
+      "URL PATH",
+      this.urlPath === "/ibmq",
+      this.$router.currentRoute.fullPath
+    );
   }
 };
 </script>
