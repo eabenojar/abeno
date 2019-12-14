@@ -540,7 +540,7 @@ export default {
 }
 #intro-section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   max-height: 900px;
   display: flex;
   justify-content: center;
@@ -573,7 +573,7 @@ export default {
 
 #intro-section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   max-height: 900px;
   display: flex;
   flex-direction: row;
@@ -608,7 +608,7 @@ export default {
   }
   .intro-container__wireframe {
     height: 100%;
-    width: 50vw;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -947,6 +947,18 @@ export default {
     transform: translateY(0);
   }
 }
+@media only screen and (min-width: 1584px) {
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  #intro-section,
+  #about-section,
+  #project-section {
+    max-width: 1584px;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 1200px) {
   #project-section {
     min-height: 100vh;
@@ -1043,7 +1055,7 @@ export default {
 @media only screen and (max-width: 768px) {
   #intro-section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     max-height: 900px;
     /* background: lightsalmon; */
     display: flex;
@@ -1108,7 +1120,7 @@ export default {
   #project-section {
     min-height: 100vh;
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /* background: #2471a3; */
@@ -1252,7 +1264,7 @@ export default {
   #intro-section {
     min-height: 100vh;
     height: auto;
-    width: 100vw;
+    width: 100%;
     /* background: lightsalmon; */
     display: flex;
     justify-content: flex-start;
@@ -1334,7 +1346,7 @@ export default {
   #project-section {
     min-height: 100vh;
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /* background: #2471a3; */
