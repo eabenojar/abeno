@@ -2,7 +2,7 @@
   <div class="container">
     <div class="intro-container" id="intro-section">
       <div class="intro-container__description">
-        <h5 class="intro-container__sub-header">Hello!!!</h5>
+        <h5 class="intro-container__sub-header">Hello, I'm</h5>
         <h2 class="intro-container__description--title">
           Eric
           <br />Abenojar
@@ -132,24 +132,6 @@ export default {
   },
 
   created() {
-    //   var lastScrollTop = 0;
-    //   var tries = 0;
-    //   // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-    //   window.addEventListener(
-    //     "scroll",
-    //     function() {
-    //       console.log("SCROLL DETECTED");
-    //       // or window.addEventListener("scroll"....
-    //       var st = window.pageYOffset || document.documentElement.scrollTop;
-    //       if (st > lastScrollTop) {
-    //         // downscroll code
-    //         this.scrollToWorkTwo();
-    //       } else {
-    //       }
-    //       lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    //     }.bind(this),
-    //     false
-    //   );
     var initialPosition = 0;
     var windowPosition = window.innerHeight;
     initialPosition = windowPosition;
@@ -173,8 +155,7 @@ export default {
           const b3 = document.getElementById("building-3");
           const b3A = document.getElementById("building-3A");
           const b4 = document.getElementById("building-4");
-          // const work = document.getElementById("project-section");
-          // this.scrollToWorkTwo(work);
+
           b1.classList.add("building-1-animate");
           b1A.classList.add("building-1A-animate");
           b2.classList.add("building-2-animate");
@@ -216,9 +197,7 @@ export default {
     toWork() {
       this.$router.push("ibmq");
     },
-    // redirectIBMQ() {
-    //   this.$router.push("ibmq");
-    // },
+
     scrollToWork() {
       scrollTo(work, 0, 1250);
       function scrollTo(element, to, duration) {
@@ -592,7 +571,11 @@ export default {
   .intro-container__sub-header {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    // color: #4c628d;
+
+    // padding: 0 0 0.5rem 0;
+    // border-bottom: 3px solid black;
   }
   .intro-container__description--title {
     font-family: Montserrat, sans-serif;

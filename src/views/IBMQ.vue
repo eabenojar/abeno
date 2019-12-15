@@ -228,7 +228,6 @@ export default {
   },
   methods: {
     tabClicked(value) {
-      console.log("CLICKED", value);
       this.isTabClicked = value;
     },
     getImage(pic) {
