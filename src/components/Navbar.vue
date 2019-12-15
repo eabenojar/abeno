@@ -73,6 +73,43 @@ export default {
     };
   },
   methods: {
+    scrollToElement() {
+      // Grab all the scroll class anchor elements, use whatever class you like
+      const scrollElems = document.querySelectorAll(".scroll");
+      // Now add an event listeners to those element
+      for (let i = 0; i < scrollElems.length; i++) {
+        const elem = scrollElems[i];
+
+        elem.addEventListener("click", function(e) {
+          e.preventDefault();
+
+          // 1. Get the element id to which you want to scroll
+          const scrollElemId = e.target.href.split("#")[1];
+
+          // 2. find that node from the document
+          const scrollEndElem = document.getElementById(scrollElemId);
+
+          // 3. and well animate to that node..
+          const anim = requestAnimationFrame(timestamp => {
+            const stamp = timestamp || new Date().getTime();
+            const duration = 1200;
+            const start = stamp;
+
+            const startScrollOffset = window.pageYOffset;
+            const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+
+            scrollToElem(
+              start,
+              stamp,
+              duration,
+              scrollEndElemTop,
+              startScrollOffset
+            );
+          });
+        });
+      }
+    },
+
     scrollTo(element, to, duration) {
       if (duration <= 0) return;
       var difference = to - element.scrollTop;
@@ -85,7 +122,7 @@ export default {
     },
     scrollClicked(id) {
       var elmnt = document.getElementById(id);
-      scrollTo(document.body, elmnt.offsetTop, 2000);
+      scrollTo(document.body, elmnt.offsetTop, 600);
       this.isNavOpen = !this.isNavOpen;
     },
     openNav() {
@@ -322,9 +359,7 @@ ul li a {
   justify-content: space-between;
   align-items: center;
   img {
-    position: absolute;
-    left: 4rem;
-    top: 0;
+    margin-left: 4rem;
   }
 }
 @media only screen and (min-width: 1584px) {
@@ -383,9 +418,7 @@ ul li a {
 @media only screen and (max-width: 540px) {
   .navbar-container {
     img {
-      position: absolute;
-      left: 2rem;
-      top: 0;
+      margin: 0 0 0 2rem;
     }
   }
   .navbar {

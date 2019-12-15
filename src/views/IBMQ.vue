@@ -327,12 +327,13 @@ export default {
   height: 48px;
   text-decoration: none;
   background: #120f32;
-  margin: 2rem 3rem;
+  margin: 2rem 4rem;
   border-radius: 5px;
   color: #fff;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 400;
+  border: none;
   button {
     outline: none;
   }
@@ -340,7 +341,7 @@ export default {
 .work-button:hover {
   height: 48px;
   width: 240px;
-  background: #312985;
+  background: #26536b;
   border-radius: 5px;
   color: #fff;
   font-family: Montserrat, sans-serif;
@@ -371,16 +372,16 @@ export default {
 .ibmq-introduction__content--title {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 6rem 0 0 0;
-  padding: 0 3rem;
+  padding: 0 4rem;
 }
 .ibmq-introduction__content--description {
   font-family: Montserrat, sans-serif;
   font-weight: 200;
   font-size: 1.25rem;
   margin: 2rem 0 0 0;
-  padding: 0 3rem;
+  padding: 0 4rem;
 }
 .ibmq-components {
   display: flex;
@@ -394,14 +395,14 @@ export default {
     font-weight: 600;
     font-size: 2rem;
     margin: 0;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
   .ibmq-components__description {
     font-family: Montserrat, sans-serif;
     font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 0 0 0;
-    padding: 0 3rem;
+    padding: 0 4rem;
     width: 40%;
   }
   .ibmq-components__tabs {
@@ -418,7 +419,7 @@ export default {
       font-family: Montserrat, sans-serif;
       font-weight: 600;
       font-size: 0.8rem;
-      margin: 0.25rem 3rem;
+      margin: 0.25rem 4rem;
       color: #284dcf;
       border: none;
       box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
@@ -434,7 +435,7 @@ export default {
       font-family: Montserrat, sans-serif;
       font-weight: 600;
       font-size: 0.8rem;
-      margin: 0.25rem 3rem;
+      margin: 0.25rem 4rem;
       color: #284dcf;
       background: none;
       border: none;
@@ -487,14 +488,14 @@ export default {
     font-weight: 600;
     font-size: 2rem;
     margin: 6rem 0 0 0;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
   .ibmq-projects-content__description {
     font-family: Montserrat, sans-serif;
     font-weight: 200;
     font-size: 1.25rem;
     margin: 2rem 0 0 0;
-    padding: 0 3rem;
+    padding: 0 4rem;
     width: 50%;
   }
 }
@@ -654,14 +655,14 @@ export default {
       font-weight: 600;
       font-size: 2rem;
       margin: 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
     }
     .ibmq-components__description {
       font-family: Montserrat, sans-serif;
       font-weight: 200;
       font-size: 1.25rem;
       margin: 2rem 0 0 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
       width: 80%;
     }
     .ibmq-components__tabs {
@@ -671,7 +672,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 0 3rem;
+      padding: 0 4rem;
       .active-tab {
         background-color: #fff;
         text-align: left;
@@ -714,7 +715,7 @@ export default {
       height: auto;
       display: flex;
       justify-content: center;
-      padding: 0 3rem;
+      padding: 0 4rem;
       align-items: center;
       flex-wrap: wrap;
       #desktop-navbar {
@@ -848,14 +849,14 @@ export default {
       font-weight: 600;
       font-size: 2rem;
       margin: 6rem 0 0 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
     }
     .ibmq-projects-content__description {
       font-family: Montserrat, sans-serif;
       font-weight: 200;
       font-size: 1.25rem;
       margin: 2rem 0 0 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
       width: 80%;
       line-height: 1.25;
     }
@@ -942,14 +943,14 @@ export default {
       font-weight: 600;
       font-size: 2rem;
       margin: 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
     }
     .ibmq-components__description {
       font-family: Montserrat, sans-serif;
       font-weight: 200;
       font-size: 1.25rem;
       margin: 2rem 0 0 0;
-      padding: 0 3rem;
+      padding: 0 4rem;
       width: 70%;
     }
     .ibmq-components__tabs {
@@ -1078,7 +1079,7 @@ export default {
   .ibmq-introduction__content--title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin: 2rem 0 0 0;
     padding: 0;
   }
@@ -1088,7 +1089,7 @@ export default {
     font-size: 1.25rem;
     margin: 2rem 0;
     padding: 0;
-    width: 80%;
+    width: 100%;
   }
   .ibmq-components .ibmq-components__title {
     font-family: Montserrat, sans-serif;
@@ -1116,7 +1117,7 @@ export default {
     font-family: Montserrat, sans-serif;
     font-weight: 200;
     font-size: 1.25rem;
-    margin: 2rem 2em;
+    margin: 2rem 2rem;
     padding: 0;
     width: 80%;
   }

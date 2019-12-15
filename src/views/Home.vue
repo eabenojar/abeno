@@ -580,7 +580,7 @@ export default {
   .intro-container__description--title {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 6rem 0 0 0;
   }
   .intro-container__description--content {
@@ -710,7 +710,7 @@ export default {
   flex-direction: row;
   /* background: #2471a3; */
   .work-container__description {
-    width: 40%;
+    width: 45%;
     height: 100%;
     min-height: 100vh;
 
@@ -736,7 +736,7 @@ export default {
     }
   }
   .work-container__chalkboard {
-    width: 60%;
+    width: 55%;
     min-height: 100vh;
     height: 100%;
     display: flex;
