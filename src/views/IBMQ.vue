@@ -41,18 +41,22 @@
             :class="isTabClicked === 2 ? 'active-tab' : 'tab-button'"
           >MOBILE</button>
         </div>
-        <div v-if="isTabClicked === 0" class="ibmq-components__images">
-          <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
-          <img id="desktop-carousel" src="../assets/images/carousel-desktop.svg" alt />
-        </div>
-        <div v-else-if="isTabClicked === 1" class="ibmq-components__images">
-          <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
-          <img id="tablet-carousel" src="../assets/images/carousel-tablet.svg" alt />
-        </div>
-        <div v-else-if="isTabClicked === 2" class="ibmq-components__images">
-          <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
-          <img id="mobile-carousel" src="../assets/images/carousel-mobile.svg" alt />
-        </div>
+        <transition name="fade">
+          <div key="1" v-if="isTabClicked === 0" class="ibmq-components__images">
+            <img id="desktop-navbar" src="../assets/images/desktop-navbar.svg" alt />
+            <img id="desktop-carousel" src="../assets/images/carousel-desktop.svg" alt />
+          </div>
+
+          <div key="2" v-else-if="isTabClicked === 1" class="ibmq-components__images">
+            <img id="tablet-navbar" src="../assets/images/tablet-navbar.svg" alt />
+            <img id="tablet-carousel" src="../assets/images/carousel-tablet.svg" alt />
+          </div>
+
+          <div key="3" v-else-if="isTabClicked === 2" class="ibmq-components__images">
+            <img id="mobile-navbar" src="../assets/images/mobile-navbar.svg" alt />
+            <img id="mobile-carousel" src="../assets/images/carousel-mobile.svg" alt />
+          </div>
+        </transition>
       </div>
       <div class="ibmq-projects-content">
         <h1 class="ibmq-projects-content__title">OPTIMIZATION</h1>
@@ -267,6 +271,13 @@ export default {
 
 
 <style scoped lang="scss">
+.fade-enter-active {
+  transition: opacity 1.25s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 @media only screen and (min-width: 1584px) {
   .ibmq-container {
     display: flex;
@@ -522,8 +533,8 @@ export default {
 }
 .ibmq-projects__box {
   cursor: pointer;
-  height: 300px;
-  width: 400px;
+  height: 280px;
+  width: 380px;
   margin: 2rem 1rem 2rem 1rem;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -835,7 +846,7 @@ export default {
     animation: 3s ease 0s 1 fadeInUp;
   }
   .ibmq-projects__box {
-    height: 300px;
+    height: 280px;
     width: 100%;
     max-width: 400px;
     margin: 2rem 0;

@@ -692,7 +692,7 @@ export default {
 .work-button:hover {
   height: 48px;
   width: 240px;
-  background: #312985;
+  background: #26536b;
   border-radius: 5px;
   color: #fff;
   font-family: Montserrat, sans-serif;
