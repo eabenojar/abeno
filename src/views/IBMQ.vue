@@ -98,7 +98,7 @@ export default {
         {
           title: "IBM Homepage",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "Learn more about what IBM Q has to offer from hardware to software. ",
           image: "homepage.png",
           performance: "15/93",
           accessibility: "78/96",
@@ -108,7 +108,7 @@ export default {
         {
           title: "What is Quantum Computing?",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "We experience the benefits of classical computing every day. However, there are challenges that today’s systems will never be able to solve. ",
           image: "what-is-qc.png",
 
           performance: "44/81",
@@ -119,7 +119,7 @@ export default {
         {
           title: "What is IBM Q?",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "This effort includes advancing the entire quantum computing technology stack and exploring applications to make quantum broadly usable and accessible.",
           image: "what-is-ibmq.png",
 
           performance: "37/91",
@@ -130,7 +130,7 @@ export default {
         {
           title: "IQX Marketing",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "Accelerate your research and applications with the next generation of the leading quantum cloud services and software platform.",
           image: "iqx-marketing.png",
 
           performance: "66/87",
@@ -140,8 +140,7 @@ export default {
         },
         {
           title: "Simulator",
-          description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          description: "Test and optimize circuits on IBM's simulators.",
           image: "simulator.png",
 
           performance: "48/81",
@@ -151,8 +150,7 @@ export default {
         },
         {
           title: "Showcase",
-          description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          description: "See how our community is using quantum computing.",
           image: "showcase.png",
 
           performance: "N/A",
@@ -162,8 +160,7 @@ export default {
         },
         {
           title: "System",
-          description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+          description: "See our quantum computing systems.",
           image: "system.png",
 
           performance: "17/80",
@@ -174,7 +171,7 @@ export default {
         {
           title: "Members",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "Join the IBM Q network and be part of the quantum future.",
           image: "members.png",
 
           performance: "64/90",
@@ -185,7 +182,7 @@ export default {
         {
           title: "Researchers",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "We provide quantum researchers with support, collaboration, and tools that meets their needs.",
           image: "researchers.png",
 
           performance: "31/84",
@@ -196,7 +193,7 @@ export default {
         {
           title: "Overview",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "IBM Q Network is a community of Fortune 500 companies, academic institutions, startups and national research labs working with IBM to advance quantum computing.",
           image: "overview.png",
 
           performance: "53/81",
@@ -207,7 +204,7 @@ export default {
         {
           title: "Internship",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "This fast-paced, intensive, highly selective program will also feature seminars and research exchanges among the whole quantum research community.",
           image: "internship.png",
 
           performance: "83/91",
@@ -218,7 +215,7 @@ export default {
         {
           title: "Consulting",
           description:
-            "Learn more about what IBM Q has to offer from hardware to software. earn more about what IBM Q has to offer from hardware to software",
+            "IBM Q Consulting brings together consultants, scientists, and industry experts to help clients realize new business value through the application of quantum computing technology, and deliver customized roadmaps to help them become quantum ready.",
           image: "consulting.png",
 
           performance: "31/90",
