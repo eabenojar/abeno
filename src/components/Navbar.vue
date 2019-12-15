@@ -1,59 +1,64 @@
 <template>
-  <div v class="navbar">
-    <ul v-if="this.$router.currentRoute.fullPath !== '/ibmq' && deviceWidth > 992">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a @click="scrollClicked(`about-section`)">About</a>
-      </li>
-      <li>
-        <a @click="scrollClicked(`project-section`)">Work</a>
-      </li>
-    </ul>
-    <ul v-else-if="this.$router.currentRoute.fullPath === '/ibmq' && !isNavOpen">
-      <li>
-        <a href="/">Home</a>
-      </li>
-    </ul>
-    <nav
-      class="tablet-mobile-nav"
-      v-else-if="this.$router.currentRoute.fullPath !== '/ibmq' && isNavOpen && deviceWidth <= 992 "
-    >
-      <ul>
+  <div class="navbar">
+    <div class="navbar-container">
+      <a href="/">
+        <img src="../assets/images/EAlogo.svg" alt="Eric Abenojar home logo" />
+      </a>
+      <ul v-if="this.$router.currentRoute.fullPath !== '/ibmq' && deviceWidth > 992">
         <li>
-          <a href>
-            <i></i>HOME
-          </a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a @click="scrollClicked(`about-section`)">
-            <i></i>ABOUT
-          </a>
+          <a @click="scrollClicked(`about-section`)">About</a>
         </li>
         <li>
-          <a @click="scrollClicked(`project-section`)">
-            <i></i>WORK
-          </a>
+          <a @click="scrollClicked(`project-section`)">Work</a>
         </li>
       </ul>
-    </nav>
+      <ul v-else-if="this.$router.currentRoute.fullPath === '/ibmq' && !isNavOpen">
+        <li>
+          <a href="/">Home</a>
+        </li>
+      </ul>
+      <nav
+        class="tablet-mobile-nav"
+        v-else-if="this.$router.currentRoute.fullPath !== '/ibmq' && isNavOpen && deviceWidth <= 992 "
+      >
+        <ul>
+          <li>
+            <a href>
+              <i></i>HOME
+            </a>
+          </li>
+          <li>
+            <a @click="scrollClicked(`about-section`)">
+              <i></i>ABOUT
+            </a>
+          </li>
+          <li>
+            <a @click="scrollClicked(`project-section`)">
+              <i></i>WORK
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-    <div
-      class="menu-toggle"
-      id="menu-toggle"
-      @click="openNav()"
-      v-if="deviceWidth <= 992 && !isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
-    >
-      <div class="hamburger"></div>
-    </div>
-    <div
-      class="close-menu-toggle"
-      id="close-menu-toggle"
-      @click="openNav()"
-      v-if="deviceWidth <= 992 && isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
-    >
-      <div class="close-nav"></div>
+      <div
+        class="menu-toggle"
+        id="menu-toggle"
+        @click="openNav()"
+        v-if="deviceWidth <= 992 && !isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
+      >
+        <div class="hamburger"></div>
+      </div>
+      <div
+        class="close-menu-toggle"
+        id="close-menu-toggle"
+        @click="openNav()"
+        v-if="deviceWidth <= 992 && isNavOpen && this.$router.currentRoute.fullPath !== '/ibmq'"
+      >
+        <div class="close-nav"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -260,10 +265,6 @@ header::after {
 }
 
 @media (min-width: 700px) {
-  s .menu-toggle {
-    display: none;
-  }
-
   .site-nav {
     height: auto;
     position: relative;
@@ -293,11 +294,10 @@ header::after {
 }
 .navbar {
   height: 60px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  background: none;
+  background: #fff;
   z-index: 10000;
   position: fixed;
 }
@@ -316,6 +316,29 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #000;
+}
+.navbar-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    position: absolute;
+    left: 4rem;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1584px) {
+  .navbar {
+    max-width: 100%;
+    margin: auto 0;
+  }
+  .navbar-container {
+    max-width: 1584px;
+    width: 100%;
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 992px) {
   .tablet-mobile-nav {
@@ -360,6 +383,13 @@ ul li a {
   }
 }
 @media only screen and (max-width: 540px) {
+  .navbar-container {
+    img {
+      position: absolute;
+      left: 2rem;
+      top: 0;
+    }
+  }
   .navbar {
     position: absolute;
   }
