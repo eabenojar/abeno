@@ -61,7 +61,12 @@
         >As a front end developer, I was in charge of optimizing our website from performance, accessibility, best practices, and seo. These are the lighhouse scores showing before and after results. Our team converted the old site from Jquery/Vanilla.js to a Nuxt.js website. In the first year with the team, I built the following websites down below with Vue.js / Nuxt.js</p>
       </div>
       <div class="ibmq-projects">
-        <div v-for="(item, index) in projects" v-bind:key="index" class="ibmq-projects__box">
+        <div
+          v-for="(item, index) in projects"
+          v-bind:key="index"
+          class="ibmq-projects__box"
+          @click="openPage(item)"
+        >
           <img class="ibmq-projects__box--image" :src="getImage(item.image)" alt />
           <h1 class="ibmq-projects__box--title">{{item.title}}</h1>
           <p class="ibmq-projects__box--description">{{item.description}}</p>
@@ -103,7 +108,8 @@ export default {
           performance: "15/93",
           accessibility: "78/96",
           bestPractices: "64/93",
-          seo: "80/100"
+          seo: "80/100",
+          url: "https://www.ibm.com/quantum-computing/"
         },
         {
           title: "What is Quantum Computing?",
@@ -114,7 +120,9 @@ export default {
           performance: "44/81",
           accessibility: "83/96",
           bestPractices: "64/64",
-          seo: "89/100"
+          seo: "89/100",
+          url:
+            "https://www.ibm.com/quantum-computing/learn/what-is-quantum-computing"
         },
         {
           title: "What is IBM Q?",
@@ -125,7 +133,8 @@ export default {
           performance: "37/91",
           accessibility: "88/100",
           bestPractices: "71/86",
-          seo: "89/100"
+          seo: "89/100",
+          url: "https://www.ibm.com/quantum-computing/learn/what-is-ibm-q"
         },
         {
           title: "IQX Marketing",
@@ -136,7 +145,8 @@ export default {
           performance: "66/87",
           accessibility: "87/100",
           bestPractices: "71/71",
-          seo: "100/100"
+          seo: "100/100",
+          url: "https://www.ibm.com/quantum-computing/technology/experience"
         },
         {
           title: "Simulator",
@@ -146,7 +156,8 @@ export default {
           performance: "48/81",
           accessibility: "83/100",
           bestPractices: "64/71",
-          seo: "89/100"
+          seo: "89/100",
+          url: "https://www.ibm.com/quantum-computing/technology/simulator"
         },
         {
           title: "Showcase",
@@ -156,7 +167,8 @@ export default {
           performance: "N/A",
           accessibility: "N/A",
           bestPractices: "N/A",
-          seo: "N/A"
+          seo: "N/A",
+          url: "https://www.ibm.com/quantum-computing/network/showcase"
         },
         {
           title: "System",
@@ -166,7 +178,8 @@ export default {
           performance: "17/80",
           accessibility: "75/96",
           bestPractices: "71/71",
-          seo: "90/100"
+          seo: "90/100",
+          url: "https://www.ibm.com/quantum-computing/technology/systems"
         },
         {
           title: "Members",
@@ -177,7 +190,8 @@ export default {
           performance: "64/90",
           accessibility: "75/88",
           bestPractices: "71/79",
-          seo: "78/90"
+          seo: "78/90",
+          url: "https://www.ibm.com/quantum-computing/network/members"
         },
         {
           title: "Researchers",
@@ -188,7 +202,8 @@ export default {
           performance: "31/84",
           accessibility: "76/100",
           bestPractices: "71/71",
-          seo: "90/100"
+          seo: "90/100",
+          url: "https://www.ibm.com/quantum-computing/network/researchers"
         },
         {
           title: "Overview",
@@ -199,7 +214,8 @@ export default {
           performance: "53/81",
           accessibility: "76/81",
           bestPractices: "71/71",
-          seo: "78/90"
+          seo: "78/90",
+          url: "https://www.ibm.com/quantum-computing/network/overview"
         },
         {
           title: "Internship",
@@ -210,7 +226,8 @@ export default {
           performance: "83/91",
           accessibility: "78/100",
           bestPractices: "71/860",
-          seo: "78/100"
+          seo: "78/100",
+          url: "https://www.ibm.com/quantum-computing/internship/qurip"
         },
         {
           title: "Consulting",
@@ -221,7 +238,8 @@ export default {
           performance: "31/90",
           accessibility: "76/96",
           bestPractices: "71/71",
-          seo: "90/100"
+          seo: "90/100",
+          url: "https://www.ibm.com/quantum-computing/network/consulting"
         }
       ]
     };
@@ -229,6 +247,10 @@ export default {
   methods: {
     tabClicked(value) {
       this.isTabClicked = value;
+    },
+    openPage(page) {
+      window.open(page.url, "_blank");
+      // window.location.href = page.url;
     },
     getImage(pic) {
       // var images = require.context("../assets/", false, /\.svg$/);
@@ -498,6 +520,7 @@ export default {
   }
 }
 .ibmq-projects__box {
+  cursor: pointer;
   height: 300px;
   width: 400px;
   margin: 2rem 1rem 2rem 1rem;
@@ -506,6 +529,9 @@ export default {
   flex-direction: column;
   background: none;
   border-radius: 4px;
+  &:hover {
+    margin-top: 5px;
+  }
 }
 
 .ibmq-projects__box--title {
