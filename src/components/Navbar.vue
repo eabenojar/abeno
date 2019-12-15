@@ -91,7 +91,6 @@ export default {
     openNav() {
       this.isNavOpen = !this.isNavOpen;
       // var siteNav = (document.getElementById("site-nav").style.display = block);
-      console.log("NAVBAR IS CLICKED", this.isNavOpen);
     },
     handleResize() {
       this.deviceWidth = window.innerWidth;
@@ -105,7 +104,6 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   mounted() {
-    console.log("PATH", this.$router.currentRoute.fullPath);
     this.urlPath = window.location.pathname;
     console.log(
       "URL PATH",
