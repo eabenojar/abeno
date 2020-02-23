@@ -77,37 +77,37 @@
       </div>
       <div class="work-container__chalkboard">
         <div class="project-container__card active">
-          <a href="/ibmq">
-            <h1 class="project-container__card--title active">IBM Quantum Computing</h1>
-            <p
-              class="project-container__card--description active"
-            >Built the IBM Q marketing website using Vue.js and Nuxt.js</p>
-          </a>
+          <!-- <a href> -->
+          <h1 class="project-container__card--title active">IBM Quantum Computing</h1>
+          <p
+            class="project-container__card--description active"
+          >Built the IBM Q marketing website using Vue.js and Nuxt.js</p>
+          <!-- </a> -->
         </div>
         <div class="project-container__card">
-          <a href="https://github.com/TiGaI/OmegaView" target="_blank">
-            <h1 class="project-container__card--title">Docbit</h1>
-            <p
-              class="project-container__card--description"
-            >Productivity app for tracking goals, activities, and performance. Built with React Native, Redux, and MongoDB. Developed / Design the front end with React and Figma.</p>
-          </a>
+          <!-- <a href="https://github.com/TiGaI/OmegaView" target="_blank"> -->
+          <h1 class="project-container__card--title">Docbit</h1>
+          <p
+            class="project-container__card--description"
+          >Productivity app for tracking goals, activities, and performance. Built with React Native, Redux, and MongoDB. Developed / Design the front end with React and Figma.</p>
+          <!-- </a> -->
         </div>
         <div class="project-container__card">
-          <a href="https://minicodecamp.herokuapp.com/courses" target="_blank">
-            <h1 class="project-container__card--title">Mini Code Camp</h1>
-            <p
-              class="project-container__card--description"
-            >Built a front end crash course app using React, Redux, Node, and MongoDB</p>
-          </a>
+          <!-- <a href="https://minicodecamp.herokuapp.com/courses" target="_blank"> -->
+          <h1 class="project-container__card--title">Mini Code Camp</h1>
+          <p
+            class="project-container__card--description"
+          >Built a front end crash course app using React, Redux, Node, and MongoDB</p>
+          <!-- </a> -->
         </div>
 
         <div class="project-container__card">
-          <a href="https://github.com/eabenojar/devsspots-app" target="_blank">
-            <h1 class="project-container__card--title">Devspots</h1>
-            <p
-              class="project-container__card--description"
-            >Built a React, Redux, Node, and MongoDB app that allows developers to meet other developers</p>
-          </a>
+          <!-- <a href="https://github.com/eabenojar/devsspots-app" target="_blank"> -->
+          <h1 class="project-container__card--title">Devspots</h1>
+          <p
+            class="project-container__card--description"
+          >Built a React, Redux, Node, and MongoDB app that allows developers to meet other developers</p>
+          <!-- </a> -->
         </div>
       </div>
     </div>

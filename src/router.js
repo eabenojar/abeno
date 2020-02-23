@@ -10,17 +10,17 @@ Vue.use(Router);
 export default new Router({
     mode: 'history',
     routes: [{
-            path: '/',
-            component: Home
-        },
-        {
-            path: '/work',
-            component: Work
-        },
-        {
-            path: '/ibmq',
-            component: IBMQ
-        }
+        path: '/',
+        component: Home
+    },
+        // {
+        //     path: '/work',
+        //     component: Work
+        // },
+        // {
+        //     path: '/ibmq',
+        //     component: IBMQ
+        // }
 
     ]
 })
